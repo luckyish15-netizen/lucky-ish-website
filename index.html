@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lucky Ish Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: lightgreen;
+            text-align: center;
+            font-family: Arial;
+        }
+        input {
+            padding: 12px;
+            width: 80%;
+            margin: 10px;
+        }
+        button {
+            background: green;
+            color: white;
+            padding: 12px;
+            width: 85%;
+            font-size: 20px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="color:green;">Welcome to Lucky Ish Website</h1>
+<p>Write your marks here</p>
+
+<input id="name" placeholder="Your name">
+<br>
+<input id="adm" placeholder="Adm Number">
+<br>
+<input id="eng" type="number" placeholder="English marks">
+<br>
+<input id="math" type="number" placeholder="Maths marks">
+<br><br>
+
+<button onclick="checkResult()">Check My Result</button>
+
+<h2 id="result"></h2>
+
+<script>
+function checkResult() {
+    let name = document.getElementById("name").value;
+    let adm = document.getElementById("adm").value;
+    let eng = document.getElementById("eng").value;
+    let math = document.getElementById("math").value;
+
+    if (!name || !adm || eng === "" || math === "") {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    eng = Number(eng);
+    math = Number(math);
+
+    if (eng < 0 || eng > 100 || math < 0 || math > 100) {
+        alert("Marks must be between 0 and 100!");
+        return;
+    }
+
+    let total = eng + math;
+    let average = total / 2;
+
+    document.getElementById("result").innerHTML =
+        "Student: " + name +
+        "<br>Admission: " + adm +
+        "<br>Total Marks: " + total +
+        "<br>Average: " + average;
+}
+</script>
+
+</body>
+  </html>
+  
