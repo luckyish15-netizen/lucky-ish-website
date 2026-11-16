@@ -1,79 +1,111 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lucky Ish Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            background: lightgreen;
-            text-align: center;
-            font-family: Arial;
-        }
-        input {
-            padding: 12px;
-            width: 80%;
-            margin: 10px;
-        }
-        button {
-            background: green;
-            color: white;
-            padding: 12px;
-            width: 85%;
-            font-size: 20px;
-            border: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucky Ish Website</title>
+
+<style>
+body {
+    background: lightgreen;
+    font-family: Arial;
+    text-align: center;
+    padding: 20px;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 450px;
+    margin: auto;
+}
+h1 {
+    color: green;
+}
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid green;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+button {
+    background: green;
+    color: white;
+    padding: 14px;
+    width: 95%;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+#result {
+    color: green;
+    font-size: 18px;
+    margin-top: 20px;
+}
+</style>
 </head>
+
 <body>
 
-<h1 style="color:green;">Welcome to Lucky Ish Website</h1>
-<p>Write your marks here</p>
+<div class="container">
 
-<input id="name" placeholder="Your name">
-<br>
-<input id="adm" placeholder="Adm Number">
-<br>
-<input id="eng" type="number" placeholder="English marks">
-<br>
-<input id="math" type="number" placeholder="Maths marks">
-<br><br>
+<h1>WELCOME TO LUCKY ISH</h1>
+<p>Student Marks Calculator</p>
 
-<button onclick="checkResult()">Check My Result</button>
+<input id="name" placeholder="Student Name">
 
-<h2 id="result"></h2>
+<input id="adm" placeholder="Admission Number">
+
+<input id="eng" type="number" placeholder="English Marks">
+
+<input id="math" type="number" placeholder="Maths Marks">
+
+<button onclick="checkResult()">CHECK MY RESULT</button>
+
+<div id="result"></div>
+
+</div>
 
 <script>
 function checkResult() {
-    let name = document.getElementById("name").value;
-    let adm = document.getElementById("adm").value;
-    let eng = document.getElementById("eng").value;
-    let math = document.getElementById("math").value;
 
-    if (!name || !adm || eng === "" || math === "") {
-        alert("Please fill all fields!");
-        return;
-    }
+let name = document.getElementById("name").value;
+let adm = document.getElementById("adm").value;
+let eng = Number(document.getElementById("eng").value);
+let math = Number(document.getElementById("math").value);
 
-    eng = Number(eng);
-    math = Number(math);
+if (!name || !adm ||
+document.getElementById("eng").value === "" ||
+document.getElementById("math").value === "") {
+alert("Please fill all fields!");
+return;
+}
 
-    if (eng < 0 || eng > 100 || math < 0 || math > 100) {
-        alert("Marks must be between 0 and 100!");
-        return;
-    }
+if (eng < 0 || eng > 100 ||
+math < 0 || math > 100) {
+alert("Marks must be between 0 and 100!");
+return;
+}
 
-    let total = eng + math;
-    let average = total / 2;
+let total = eng + math;
+let average = total / 2;
 
-    document.getElementById("result").innerHTML =
-        "Student: " + name +
-        "<br>Admission: " + adm +
-        "<br>Total Marks: " + total +
-        "<br>Average: " + average;
+let grade = average >= 80 ? "A" :
+average >= 70 ? "B" :
+average >= 60 ? "C" :
+average >= 50 ? "D" : "E";
+
+document.getElementById("result").innerHTML =
+"Student: " + name +
+"<br>Admission: " + adm +
+"<br>Total Marks: " + total +
+"<br>Average: " + average +
+"<br>Grade: " + grade;
 }
 </script>
 
 </body>
-  </html>
-  
+</html>
