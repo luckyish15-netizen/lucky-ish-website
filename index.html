@@ -108,6 +108,45 @@ document.getElementById("result").innerHTML =
 "<br>Grade: " + grade;
 }
 </script>
+<style>
+.photo-gallery {
+  background: #001a0b;
+  color: white;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.photo-gallery h2 {
+  color: #39ff14;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border: 4px solid #39ff14;
+  border-radius: 15px;
+}
+</style>
+
+<section class="photo-gallery" id="gallery">
+  <h2>LUCKY ISH PHOTO GALLERY</h2>
+  <p>Memories • Moments • Inspiration</p>
+
+  <div class="gallery-grid">
+    <img src="1794743036629.jpg" alt="Lucky Ish Photo 1">
+    <img src="1794779833327.jpg" alt="Lucky Ish Photo 2">
+    <img src="1794780570922~4.jpg" alt="Lucky Ish Photo 3">
+  </div>
+</section>
 
 </body>
 </html>
