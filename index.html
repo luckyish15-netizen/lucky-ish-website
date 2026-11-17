@@ -2,151 +2,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="E31AMhCWPnMmMS4U5Q3qAReAP8ak4fsSB3smdc6c6jo" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lucky Ish Website</title>
-<meta name="description" content="Welcome to Lucky Ish Website. Discover my website and student marks calculator created by Lucky Ish.">
+<meta name="google-site-verification" content="E31AMhCWPnMmMS4U5Q3qAReAP8ak4fsSB3smdc6c6jo">
+<title>LUCKY ISH CBC SMART LEARNING SYSTEM</title>
+<meta name="description" content="LUCKY ISH CBC SMART LEARNING SYSTEM supports students and teachers from Grade 1 to Grade 12.">
 
 <style>
+* { box-sizing: border-box; }
+
 body {
-    background: lightgreen;
-    font-family: Arial;
-    text-align: center;
-    padding: 20px;
-}
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 450px;
-    margin: auto;
-}
-h1 {
-    color: green;
-}
-input {
-    width: 90%;
-    padding: 12px;
-    margin: 10px;
-    border: 1px solid green;
-    border-radius: 7px;
-    box-sizing: border-box;
-}
-button {
-    background: green;
-    color: white;
-    padding: 14px;
-    width: 95%;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-}
-#result {
-    color: green;
-    font-size: 18px;
-    margin-top: 20px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>WELCOME TO LUCKY ISH WEBSITE</h1>
-<p>Student Marks Calculator</p>
-
-<input id="name" placeholder="Student Name">
-
-<input id="adm" placeholder="Admission Number">
-
-<input id="eng" type="number" placeholder="English Marks">
-
-<input id="math" type="number" placeholder="Maths Marks">
-
-<button onclick="checkResult()">CHECK MY RESULT</button>
-
-<div id="result"></div>
-
-</div>
-
-<script>
-function checkResult() {
-
-let name = document.getElementById("name").value;
-let adm = document.getElementById("adm").value;
-let eng = Number(document.getElementById("eng").value);
-let math = Number(document.getElementById("math").value);
-
-if (!name || !adm ||
-document.getElementById("eng").value === "" ||
-document.getElementById("math").value === "") {
-alert("Please fill all fields!");
-return;
-}
-
-if (eng < 0 || eng > 100 ||
-math < 0 || math > 100) {
-alert("Marks must be between 0 and 100!");
-return;
-}
-
-let total = eng + math;
-let average = total / 2;
-
-let grade = average >= 80 ? "A" :
-average >= 70 ? "B" :
-average >= 60 ? "C" :
-average >= 50 ? "D" : "E";
-
-document.getElementById("result").innerHTML =
-"Student: " + name +
-"<br>Admission: " + adm +
-"<br>Total Marks: " + total +
-"<br>Average: " + average +
-"<br>Grade: " + grade;
-}
-</script>
-<style>
-.photo-gallery {
-  background: #001a0b;
+  margin: 0;
+  padding: 0;
+  background: #050505;
   color: white;
-  padding: 30px 15px;
-  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.photo-gallery h2 {
+header {
+  background: #101010;
+  padding: 22px 12px;
+  text-align: center;
+  border-bottom: 2px solid #d4af37;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  color: #d4af37;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header h1 {
+  color: #d4af37;
+  font-size: 23px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background: #151515;
+}
+
+nav a {
   color: #39ff14;
-  font-size: 28px;
-  margin-bottom: 25px;
+  text-decoration: none;
+  padding: 9px;
+  font-size: 14px;
+}
+
+section {
+  padding: 25px 15px;
+  margin: 15px auto;
+  max-width: 850px;
+}
+
+.panel {
+  background: #151515;
+  border: 1px solid #333;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+h2, h3 {
+  color: #d4af37;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border: 1px solid #777;
+  border-radius: 8px;
+  background: #fff;
+  color: #111;
+  font-size: 16px;
+}
+
+button {
+  background: #d4af37;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 18px;
+  margin: 7px 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #39ff14;
+}
+
+.green {
+  color: #39ff14;
+}
+
+.message {
+  color: #39ff14;
+  overflow-wrap: anywhere;
+}
+
+.hidden {
+  display: none;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  gap: 15px;
 }
 
 .gallery-grid img {
   width: 100%;
   height: 280px;
   object-fit: cover;
-  border: 4px solid #39ff14;
-  border-radius: 15px;
+  border: 3px solid #39ff14;
+  border-radius: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #151515;
+  color: #aaa;
+  border-top: 2px solid #d4af37;
+}
+
+hr {
+  border: 1px solid #333;
+  margin: 20px 0;
 }
 </style>
+</head>
 
-<section class="photo-gallery" id="gallery">
-  <h2>LUCKY ISH PHOTO GALLERY</h2>
-  <p>Memories • Moments • Inspiration</p>
+<body>
 
-  <div class="gallery-grid">
-    <img src="1794743036629.jpg" alt="Lucky Ish Photo 1">
-    <img src="1794779833327.jpg" alt="Lucky Ish Photo 2">
-    <img src="1794780570922~4.jpg" alt="Lucky Ish Photo 3">
+<header>
+  <div class="logo">LI</div>
+  <h1>LUCKY ISH CBC SMART LEARNING SYSTEM</h1>
+  <p class="green">Learn Smart • Work Hard • Achieve More</p>
+  <p>Learning support for Grade 1 to Grade 12</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#accounts">Student Account</a>
+  <a href="#calculator">Calculator</a>
+  <a href="#gallery">Gallery</a>
+</nav>
+
+<section id="home">
+  <div class="panel">
+    <h2>WELCOME TO LUCKY ISH CBC SMART LEARNING SYSTEM</h2>
+    <p>
+      A digital learning project designed to support learners
+      and teachers from Grade 1 to Grade 12.
+    </p>
+    <p class="green">Dream Big, Work Hard, Achieve More!</p>
   </div>
 </section>
+
+<section id="accounts">
+  <div class="panel" id="registerPanel">
+    <h2>CREATE STUDENT ACCOUNT</h2>
+
+    <form id="registerForm">
+      <input id="fullName" placeholder="Full Name" required>
+      <input id="school" placeholder="School Name" required>
+
+      <select id="grade" required>
+        <option value="">Select Grade</option>
+        <option>Grade 1</option>
+        <option>Grade 2</option>
+        <option>Grade 3</option>
+        <option>Grade 4</option>
+        <option>Grade 5</option>
+        <option>Grade 6</option>
+        <option>Grade 7</option>
+        <option>Grade 8</option>
+        <option>Grade 9</option>
+        <option>Grade 10</option>
+        <option>Grade 11</option>
+        <option>Grade 12</option>
+      </select>
+
+      <input id="regEmail" type="email" placeholder="Email Address" required>
+      <input id="regPassword" type="password"
+        placeholder="Create Password (minimum 6 characters)"
+        minlength="6" required>
+
+      <button type="submit">CREATE ACCOUNT</button>
+    </form>
+    <p id="registerMessage" class="message"></p>
+  </div>
+
+  <div class="panel" id="loginPanel">
+    <h2>STUDENT / TEACHER LOGIN</h2>
+
+    <form id="loginForm">
+      <input id="loginEmail" type="email" placeholder="Email Address" required>
+      <input id="loginPassword" type="password" placeholder="Password" required>
+      <button type="submit">LOGIN</button>
+    </form>
+
+    <button type="button" id="resetButton">FORGOT PASSWORD?</button>
+    <p id="loginMessage" class="message"></p>
+  </div>
+
+  <div class="panel hidden" id="dashboard">
+    <h2>MY DASHBOARD</h2>
+    <h3 id="welcomeName"></h3>
+    <p id="profileSchool"></p>
+    <p id="profileGrade"></p>
+    <p id="profileRole"></p>
+    <p class="green">Welcome to your learning system!</p>
+    <button type="button" id="logoutButton">LOG OUT</button>
+  </div>
+</section>
+
+<section id="calculator">
+  <div class="panel">
+    <h2>STUDENT MARKS CALCULATOR</h2>
+    <p>Practice calculator using the original A–E marks scale. This is not an official CBC assessment grade.</p>
+
+    <input id="name" placeholder="Student Name">
+    <input id="adm" placeholder="Admission Number">
+    <input id="eng" type="number" min="0" max="100" placeholder="English Marks">
+    <input id="math" type="number" min="0" max="100" placeholder="Maths Marks">
+
+    <button type="button" onclick="checkResult()">CHECK MY RESULT</button>
+    <div id="result" class="message"></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="panel">
+    <h2>LUCKY ISH PHOTO GALLERY</h2>
+    <p>Memories • Moments • Inspiration</p>
+
+    <div class="gallery-grid">
+      <img src="1794743036629.jpg" alt="Lucky Ish Photo 1">
+      <img src="1794779833327.jpg" alt="Lucky Ish Photo 2">
+      <img src="1794780570922~4.jpg" alt="Lucky Ish Photo 3">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3>LUCKY ISH CBC SMART LEARNING SYSTEM</h3>
+  <p>Created by Lucky Ish</p>
+  <p>© 2026 Lucky Ish. All rights reserved.</p>
+</footer>
+
+<script>
+function checkResult() {
+  const name = document.getElementById("name").value.trim();
+  const adm = document.getElementById("adm").value.trim();
+  const engValue = document.getElementById("eng").value;
+  const mathValue = document.getElementById("math").value;
+
+  if (!name || !adm || engValue === "" || mathValue === "") {
+    alert("Please fill all fields!");
+    return;
+  }
+
+  const eng = Number(engValue);
+  const math = Number(mathValue);
+
+  if (eng < 0 || eng > 100 || math < 0 || math > 100) {
+    alert("Marks must be between 0 and 100!");
+    return;
+  }
+
+  const total = eng + math;
+  const average = total / 2;
+
+  const grade = average >= 80 ? "A" :
+    average >= 70 ? "B" :
+    average >= 60 ? "C" :
+    average >= 50 ? "D" : "E";
+
+  document.getElementById("result").textContent =
+    "Student: " + name +
+    " | Admission: " + adm +
+    " | Total: " + total +
+    " | Average: " + average +
+    " | Practice Grade: " + grade;
+}
+</script>
+
+<script type="module">
+import { initializeApp } from
+  "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+  signOut,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAnk5QgkHF6aVP2eoYo2V8PaVtNUso0wEI",
+  authDomain: "lucky-ish-cbc.firebaseapp.com",
+  projectId: "lucky-ish-cbc",
+  storageBucket: "lucky-ish-cbc.firebasestorage.app",
+  messagingSenderId: "261343586638",
+  appId: "1:261343586638:web:e267f8733aaea194fd161f"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const registerMessage = document.getElementById("registerMessage");
+const loginMessage = document.getElementById("loginMessage");
+
+document.getElementById("registerForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  registerMessage.textContent = "Creating your account...";
+
+  const name = document.getElementById("fullName").value.trim();
+  const school = document.getElementById("school").value.trim();
+  const grade = document.getElementById("grade").value;
+  const email = document.getElementById("regEmail").value.trim();
+  const password = document.getElementById("regPassword").value;
+
+  try {
+    const result = await createUserWithEmailAndPassword(auth, email, password);
+
+    await setDoc(doc(db, "users", result.user.uid), {
+      name: name,
+      school: school,
+      role: "student",
+      grade: grade,
+      email: email,
+      createdAt: serverTimestamp()
+    });
+
+    registerMessage.textContent = "Account created successfully! You are now logged in.";
+    document.getElementById("registerForm").reset();
+
+  } catch (error) {
+    registerMessage.textContent = "Account error: " + error.message;
+  }
+});
+
+document.getElementById("loginForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  loginMessage.textContent = "Logging in...";
+
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value;
+
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    loginMessage.textContent = "Login successful!";
+  } catch (error) {
+    loginMessage.textContent = "Login error: " + error.message;
+  }
+});
+
+document.getElementById("resetButton").addEventListener("click", async () => {
+  const email = document.getElementById("loginEmail").value.trim();
+
+  if (!email) {
+    loginMessage.textContent = "Enter your email address first.";
+    return;
+  }
+
+  try {
+    await sendPasswordResetEmail(auth, email);
+    loginMessage.textContent = "Password reset instructions have been sent to your email.";
+  } catch (error) {
+    loginMessage.textContent = "Reset error: " + error.message;
+  }
+});
+
+document.getElementById("logoutButton").addEventListener("click", async () => {
+  await signOut(auth);
+});
+
+onAuthStateChanged(auth, async (user) => {
+  const dashboard = document.getElementById("dashboard");
+  const registerPanel = document.getElementById("registerPanel");
+  const loginPanel = document.getElementById("loginPanel");
+
+  if (!user) {
+    dashboard.classList.add("hidden");
+    registerPanel.classList.remove("hidden");
+    loginPanel.classList.remove("hidden");
+    return;
+  }
+
+  try {
+    const profileRef = doc(db, "users", user.uid);
+    const profileSnap = await getDoc(profileRef);
+
+    if (!profileSnap.exists()) {
+      loginMessage.textContent =
+        "Your account profile is not ready. Please contact the system administrator.";
+      return;
+    }
+
+    const profile = profileSnap.data();
+
+    document.getElementById("welcomeName").textContent =
+      "Welcome, " + profile.name;
+
+    document.getElementById("profileSchool").textContent =
+      "School: " + profile.school;
+
+    document.getElementById("profileGrade").textContent =
+      "Grade: " + (profile.grade || "Teacher");
+
+    document.getElementById("profileRole").textContent =
+      "Account type: " + profile.role;
+
+    dashboard.classList.remove("hidden");
+    registerPanel.classList.add("hidden");
+    loginPanel.classList.add("hidden");
+
+  } catch (error) {
+    loginMessage.textContent = "Could not load profile: " + error.message;
+  }
+});
+</script>
 
 </body>
 </html>
