@@ -2,453 +2,978 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="E31AMhCWPnMmMS4U5Q3qAReAP8ak4fsSB3smdc6c6jo">
-<title>LUCKY ISH CBC SMART LEARNING SYSTEM</title>
-<meta name="description" content="LUCKY ISH CBC SMART LEARNING SYSTEM supports students and teachers from Grade 1 to Grade 12.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* { box-sizing: border-box; }
+  <title>Lucky Ish CBC Smart Learning System | Kenya</title>
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #050505;
-  color: white;
-  font-family: Arial, sans-serif;
-}
+  <meta name="description" content="Lucky Ish CBC Smart Learning System Kenya. CBC learning support, Grade 1 to Grade 12 subjects, student accounts, assessment calculator, report cards, KJSEA results links and Grade 10 placement guidance.">
 
-header {
-  background: #101010;
-  padding: 22px 12px;
-  text-align: center;
-  border-bottom: 2px solid #d4af37;
-}
+  <meta name="robots" content="index, follow">
 
-.logo {
-  width: 65px;
-  height: 65px;
-  border: 2px solid #d4af37;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin: auto;
-  color: #d4af37;
-  font-size: 25px;
-  font-weight: bold;
-}
+  <link rel="canonical" href="https://luckyish15-netizen.github.io/lucky-ish-website/">
 
-header h1 {
-  color: #d4af37;
-  font-size: 23px;
-}
+  <meta name="google-site-verification" content="E31AMhCWPnMmMS4U5Q3qAReAP8ak4fsSB3smdc6c6jo">
 
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 12px;
-  background: #151515;
-}
+  <meta property="og:title" content="Lucky Ish CBC Smart Learning System">
+  <meta property="og:description" content="Smart CBC learning support for Grade 1 to Grade 12 learners in Kenya.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luckyish15-netizen.github.io/lucky-ish-website/">
 
-nav a {
-  color: #39ff14;
-  text-decoration: none;
-  padding: 9px;
-  font-size: 14px;
-}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lucky Ish CBC Smart Learning System",
+    "url": "https://luckyish15-netizen.github.io/lucky-ish-website/",
+    "description": "An independent Kenyan educational learning platform supporting CBC learners from Grade 1 to Grade 12.",
+    "inLanguage": "en-KE"
+  }
+  </script>
 
-section {
-  padding: 25px 15px;
-  margin: 15px auto;
-  max-width: 850px;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-.panel {
-  background: #151515;
-  border: 1px solid #333;
-  border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 18px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #080808;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-h2, h3 {
-  color: #d4af37;
-}
+    header {
+      background: #111111;
+      border-bottom: 2px solid #d4af37;
+      padding: 18px;
+      text-align: center;
+    }
 
-input, select {
-  display: block;
-  width: 100%;
-  padding: 13px;
-  margin: 10px 0;
-  border: 1px solid #777;
-  border-radius: 8px;
-  background: #fff;
-  color: #111;
-  font-size: 16px;
-}
+    .brand {
+      color: #d4af37;
+      font-size: 23px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
 
-button {
-  background: #d4af37;
-  color: #111;
-  border: none;
-  border-radius: 8px;
-  padding: 13px 18px;
-  margin: 7px 3px;
-  font-weight: bold;
-  cursor: pointer;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-button:hover {
-  background: #39ff14;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 9px 12px;
+      border-radius: 6px;
+      background: #222222;
+      font-size: 14px;
+    }
 
-.green {
-  color: #39ff14;
-}
+    nav a:hover {
+      background: #d4af37;
+      color: #000000;
+    }
 
-.message {
-  color: #39ff14;
-  overflow-wrap: anywhere;
-}
+    .hero {
+      text-align: center;
+      padding: 65px 18px;
+      background: linear-gradient(135deg, #111111, #202000);
+    }
 
-.hidden {
-  display: none;
-}
+    .hero h1 {
+      color: #d4af37;
+      font-size: 32px;
+    }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
+    .hero p {
+      max-width: 700px;
+      margin: 15px auto;
+    }
 
-.gallery-grid img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border: 3px solid #39ff14;
-  border-radius: 12px;
-}
+    .section {
+      padding: 35px 16px;
+      max-width: 1050px;
+      margin: auto;
+    }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #151515;
-  color: #aaa;
-  border-top: 2px solid #d4af37;
-}
+    .panel {
+      background: #151515;
+      border: 1px solid #393939;
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 25px;
+    }
 
-hr {
-  border: 1px solid #333;
-  margin: 20px 0;
-}
-</style>
+    h2, h3 {
+      color: #d4af37;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      margin: 8px 0 14px;
+      border: 1px solid #555555;
+      border-radius: 7px;
+      background: #080808;
+      color: white;
+      font-size: 15px;
+    }
+
+    button, .portal-button {
+      display: inline-block;
+      border: none;
+      border-radius: 7px;
+      background: #d4af37;
+      color: #000000;
+      padding: 13px 17px;
+      margin: 7px 4px 7px 0;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    button:hover, .portal-button:hover {
+      background: #39ff14;
+    }
+
+    .portal-button {
+      display: block;
+      margin: 13px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .message {
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 7px;
+      background: #242424;
+      overflow-wrap: anywhere;
+    }
+
+    .small-note {
+      color: #cccccc;
+      font-size: 13px;
+    }
+
+    .subject-row {
+      display: grid;
+      grid-template-columns: 1fr 100px auto;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 9px;
+      padding: 9px;
+      background: #222222;
+      border-radius: 7px;
+    }
+
+    .subject-row input {
+      margin: 0;
+    }
+
+    .subject-row button {
+      margin: 0;
+      padding: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #d4af37;
+    }
+
+    #reportCard {
+      background: #ffffff;
+      color: #111111;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    #reportCard h3 {
+      color: #111111;
+    }
+
+    #reportCard table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #reportCard th, #reportCard td {
+      border: 1px solid #777777;
+      padding: 9px;
+      text-align: left;
+    }
+
+    footer {
+      text-align: center;
+      background: #111111;
+      padding: 25px 15px;
+      border-top: 2px solid #d4af37;
+      color: #cccccc;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 550px) {
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .subject-row {
+        grid-template-columns: 1fr 85px auto;
+        font-size: 13px;
+      }
+
+      .panel {
+        padding: 15px;
+      }
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+
+      #reportCard, #reportCard * {
+        visibility: visible;
+      }
+
+      #reportCard {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">LI</div>
-  <h1>LUCKY ISH CBC SMART LEARNING SYSTEM</h1>
-  <p class="green">Learn Smart • Work Hard • Achieve More</p>
-  <p>Learning support for Grade 1 to Grade 12</p>
+  <div class="brand">LUCKY ISH CBC SMART LEARNING SYSTEM</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#accounts">Student Account</a>
+    <a href="#assessment">CBC Assessment</a>
+    <a href="#grade9-portal">Grade 9 Portal</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#accounts">Student Account</a>
-  <a href="#calculator">Calculator</a>
-  <a href="#gallery">Gallery</a>
-</nav>
+<section class="hero" id="home">
+  <h1>WELCOME TO LUCKY ISH CBC SMART LEARNING SYSTEM</h1>
 
-<section id="home">
+  <p>
+    A learning support platform for Kenyan learners from Grade 1 to Grade 12.
+    Access student accounts, practice assessments, report cards and official
+    education service links.
+  </p>
+
+  <a class="portal-button" href="#accounts">CREATE STUDENT ACCOUNT</a>
+  <a class="portal-button" href="#assessment">OPEN CBC ASSESSMENT</a>
+</section>
+
+<!-- STUDENT ACCOUNT -->
+
+<section class="section" id="accounts">
   <div class="panel">
-    <h2>WELCOME TO LUCKY ISH CBC SMART LEARNING SYSTEM</h2>
+    <h2>STUDENT ACCOUNT</h2>
+
     <p>
-      A digital learning project designed to support learners
-      and teachers from Grade 1 to Grade 12.
+      Register your student account or log in to access your student dashboard.
     </p>
-    <p class="green">Dream Big, Work Hard, Achieve More!</p>
+
+    <div id="authForms" class="grid">
+
+      <form id="registerForm">
+        <h3>Student Registration</h3>
+
+        <label>Full Name</label>
+        <input id="registerName" type="text" required placeholder="Enter full name">
+
+        <label>School Name</label>
+        <input id="registerSchool" type="text" required placeholder="Enter school name">
+
+        <label>Grade</label>
+        <select id="registerGrade" required>
+          <option value="">Select Grade</option>
+          <option>Grade 1</option>
+          <option>Grade 2</option>
+          <option>Grade 3</option>
+          <option>Grade 4</option>
+          <option>Grade 5</option>
+          <option>Grade 6</option>
+          <option>Grade 7</option>
+          <option>Grade 8</option>
+          <option>Grade 9</option>
+          <option>Grade 10</option>
+          <option>Grade 11</option>
+          <option>Grade 12</option>
+        </select>
+
+        <label>Email Address</label>
+        <input id="registerEmail" type="email" required placeholder="Enter email">
+
+        <label>Password</label>
+        <input id="registerPassword" type="password" required minlength="6" placeholder="At least 6 characters">
+
+        <button type="submit">CREATE STUDENT ACCOUNT</button>
+      </form>
+
+      <form id="loginForm">
+        <h3>Student Login</h3>
+
+        <label>Email Address</label>
+        <input id="loginEmail" type="email" required placeholder="Enter email">
+
+        <label>Password</label>
+        <input id="loginPassword" type="password" required placeholder="Enter password">
+
+        <button type="submit">LOGIN</button>
+      </form>
+
+      <form id="resetForm">
+        <h3>Forgot Password?</h3>
+
+        <label>Your Email Address</label>
+        <input id="resetEmail" type="email" required placeholder="Enter registered email">
+
+        <button type="submit">SEND PASSWORD RESET LINK</button>
+      </form>
+
+    </div>
+
+    <div id="authMessage" class="message" aria-live="polite"></div>
+
+    <div id="studentDashboard" class="panel hidden">
+      <h2>STUDENT DASHBOARD</h2>
+
+      <p>Welcome, <strong id="studentName"></strong></p>
+      <p>School: <span id="studentSchool"></span></p>
+      <p>Grade: <span id="studentGrade"></span></p>
+      <p>Email: <span id="studentEmail"></span></p>
+
+      <a class="portal-button" href="#assessment">GO TO CBC ASSESSMENT</a>
+
+      <button id="logoutButton">LOG OUT</button>
+    </div>
   </div>
 </section>
 
-<section id="accounts">
-  <div class="panel" id="registerPanel">
-    <h2>CREATE STUDENT ACCOUNT</h2>
+<!-- CBC ASSESSMENT -->
 
-    <form id="registerForm">
-      <input id="fullName" placeholder="Full Name" required>
-      <input id="school" placeholder="School Name" required>
-
-      <select id="grade" required>
-        <option value="">Select Grade</option>
-        <option>Grade 1</option>
-        <option>Grade 2</option>
-        <option>Grade 3</option>
-        <option>Grade 4</option>
-        <option>Grade 5</option>
-        <option>Grade 6</option>
-        <option>Grade 7</option>
-        <option>Grade 8</option>
-        <option>Grade 9</option>
-        <option>Grade 10</option>
-        <option>Grade 11</option>
-        <option>Grade 12</option>
-      </select>
-
-      <input id="regEmail" type="email" placeholder="Email Address" required>
-      <input id="regPassword" type="password"
-        placeholder="Create Password (minimum 6 characters)"
-        minlength="6" required>
-
-      <button type="submit">CREATE ACCOUNT</button>
-    </form>
-    <p id="registerMessage" class="message"></p>
-  </div>
-
-  <div class="panel" id="loginPanel">
-    <h2>STUDENT / TEACHER LOGIN</h2>
-
-    <form id="loginForm">
-      <input id="loginEmail" type="email" placeholder="Email Address" required>
-      <input id="loginPassword" type="password" placeholder="Password" required>
-      <button type="submit">LOGIN</button>
-    </form>
-
-    <button type="button" id="resetButton">FORGOT PASSWORD?</button>
-    <p id="loginMessage" class="message"></p>
-  </div>
-
-  <div class="panel hidden" id="dashboard">
-    <h2>MY DASHBOARD</h2>
-    <h3 id="welcomeName"></h3>
-    <p id="profileSchool"></p>
-    <p id="profileGrade"></p>
-    <p id="profileRole"></p>
-    <p class="green">Welcome to your learning system!</p>
-    <button type="button" id="logoutButton">LOG OUT</button>
-  </div>
-</section>
-
-<section id="calculator">
+<section class="section" id="assessment">
   <div class="panel">
-    <h2>STUDENT MARKS CALCULATOR</h2>
-    <p>Practice calculator using the original A–E marks scale. This is not an official CBC assessment grade.</p>
+    <h2>CBC ASSESSMENT CALCULATOR</h2>
 
-    <input id="name" placeholder="Student Name">
-    <input id="adm" placeholder="Admission Number">
-    <input id="eng" type="number" min="0" max="100" placeholder="English Marks">
-    <input id="math" type="number" min="0" max="100" placeholder="Maths Marks">
+    <p>
+      Enter marks for your subjects to calculate your practice average
+      and prepare a simple report card.
+    </p>
 
-    <button type="button" onclick="checkResult()">CHECK MY RESULT</button>
-    <div id="result" class="message"></div>
+    <label>Student Name</label>
+    <input id="assessmentName" type="text" placeholder="Enter student name">
+
+    <label>Select Grade</label>
+    <select id="assessmentGrade">
+      <option>Grade 1</option>
+      <option>Grade 2</option>
+      <option>Grade 3</option>
+      <option>Grade 4</option>
+      <option>Grade 5</option>
+      <option>Grade 6</option>
+      <option>Grade 7</option>
+      <option>Grade 8</option>
+      <option>Grade 9</option>
+      <option>Grade 10</option>
+      <option>Grade 11</option>
+      <option>Grade 12</option>
+    </select>
+
+    <label>Select Subject</label>
+    <select id="subjectSelect"></select>
+
+    <button type="button" id="addSubjectButton">ADD SUBJECT</button>
+
+    <h3>ENTER SUBJECT MARKS</h3>
+
+    <p class="small-note">
+      Enter marks from 0 to 100 for each subject.
+    </p>
+
+    <div id="subjectRows"></div>
+
+    <button type="button" id="calculateButton">CALCULATE RESULTS</button>
+
+    <div id="reportCard" class="hidden"></div>
+
+    <button type="button" id="printButton" class="hidden">PRINT REPORT CARD</button>
   </div>
 </section>
 
-<section id="gallery">
-  <div class="panel">
-    <h2>LUCKY ISH PHOTO GALLERY</h2>
-    <p>Memories • Moments • Inspiration</p>
+<!-- GRADE 9 OFFICIAL PORTAL -->
 
-    <div class="gallery-grid">
-      <img src="1794743036629.jpg" alt="Lucky Ish Photo 1">
-      <img src="1794779833327.jpg" alt="Lucky Ish Photo 2">
-      <img src="1794780570922~4.jpg" alt="Lucky Ish Photo 3">
+<section class="section" id="grade9-portal">
+  <div class="panel">
+    <h2>GRADE 9 RESULTS & SENIOR SCHOOL PLACEMENT</h2>
+
+    <p>
+      Welcome to the Lucky Ish Grade 9 Student Portal.
+      Use the official government portals below to access examination
+      results and school placement services.
+    </p>
+
+    <hr>
+
+    <h3>1. CHECK KJSEA RESULTS</h3>
+
+    <p>
+      Access the official Kenya National Examinations Council results portal.
+    </p>
+
+    <p class="small-note">
+      Have your Assessment Number and the other details requested
+      by the official KNEC portal ready.
+    </p>
+
+    <a class="portal-button"
+       href="https://kjsea.knec.ac.ke"
+       target="_blank"
+       rel="noopener noreferrer">
+       CHECK OFFICIAL KNEC RESULTS
+    </a>
+
+    <hr>
+
+    <h3>2. CHECK GRADE 10 SCHOOL PLACEMENT</h3>
+
+    <p>
+      Visit the official Ministry of Education selection and placement portal.
+    </p>
+
+    <a class="portal-button"
+       href="https://selection-and-placement.kemis.go.ke/"
+       target="_blank"
+       rel="noopener noreferrer">
+       CHECK SCHOOL PLACEMENT
+    </a>
+
+    <hr>
+
+    <h3>3. SCHOOL PLACEMENT REVIEW</h3>
+
+    <p>
+      If you want to request a different Senior School, contact your
+      Junior School Head or the authorised school representative.
+      Follow the current official review instructions.
+    </p>
+
+    <a class="portal-button"
+       href="https://selection-and-placement.kemis.go.ke/"
+       target="_blank"
+       rel="noopener noreferrer">
+       OPEN OFFICIAL PLACEMENT PORTAL
+    </a>
+
+    <hr>
+
+    <h3>IMPORTANT INFORMATION</h3>
+
+    <p class="small-note">
+      These services are accessed through official government portals.
+      Lucky Ish does not collect Assessment Numbers, passwords or private
+      examination results. School placement reviews are subject to official
+      procedures and approval.
+    </p>
+
+    <p class="small-note">
+      LUCKY ISH CBC SMART LEARNING SYSTEM is an independent educational
+      project and is not affiliated with KNEC or the Ministry of Education.
+    </p>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+
+<section class="section" id="gallery">
+  <div class="panel">
+    <h2>OUR PHOTO GALLERY</h2>
+
+    <p>Welcome to the Lucky Ish gallery.</p>
+
+    <div class="gallery">
+      <img src="1794743036629.jpg" alt="Lucky Ish gallery photo 1">
+      <img src="1794779833327.jpg" alt="Lucky Ish gallery photo 2">
+      <img src="1794780570922~4.jpg" alt="Lucky Ish gallery photo 3">
     </div>
   </div>
 </section>
 
 <footer>
   <h3>LUCKY ISH CBC SMART LEARNING SYSTEM</h3>
-  <p>Created by Lucky Ish</p>
-  <p>© 2026 Lucky Ish. All rights reserved.</p>
+
+  <p>Supporting CBC learning in Kenya | Grade 1–12</p>
+
+  <p class="small-note">
+    An independent educational project. Not affiliated with KNEC
+    or the Ministry of Education.
+  </p>
+
+  <p>© 2026 Lucky Ish. All Rights Reserved.</p>
 </footer>
 
+<!-- FIREBASE -->
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
 <script>
-function checkResult() {
-  const name = document.getElementById("name").value.trim();
-  const adm = document.getElementById("adm").value.trim();
-  const engValue = document.getElementById("eng").value;
-  const mathValue = document.getElementById("math").value;
+  // FIREBASE CONFIGURATION
 
-  if (!name || !adm || engValue === "" || mathValue === "") {
-    alert("Please fill all fields!");
-    return;
+  const firebaseConfig = {
+    apiKey: "AIzaSyAnk5QgkHF6aVP2eoYo2V8PaVtNUso0wEI",
+    authDomain: "lucky-ish-cbc.firebaseapp.com",
+    projectId: "lucky-ish-cbc",
+    storageBucket: "lucky-ish-cbc.firebasestorage.app",
+    messagingSenderId: "261343586638",
+    appId: "1:261343586638:web:e267f8733aaea194fd161f",
+    measurementId: "G-98DTM3RG2G"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  let currentStudent = null;
+
+  const authMessage = document.getElementById("authMessage");
+
+  function showMessage(message) {
+    authMessage.textContent = message;
   }
 
-  const eng = Number(engValue);
-  const math = Number(mathValue);
+  // STUDENT REGISTRATION
 
-  if (eng < 0 || eng > 100 || math < 0 || math > 100) {
-    alert("Marks must be between 0 and 100!");
-    return;
+  document.getElementById("registerForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("registerName").value.trim();
+    const school = document.getElementById("registerSchool").value.trim();
+    const grade = document.getElementById("registerGrade").value;
+    const email = document.getElementById("registerEmail").value.trim();
+    const password = document.getElementById("registerPassword").value;
+
+    try {
+      showMessage("Creating your student account...");
+
+      const result = await auth.createUserWithEmailAndPassword(email, password);
+      const user = result.user;
+
+      await db.collection("users").doc(user.uid).set({
+        name: name,
+        school: school,
+        role: "student",
+        grade: grade,
+        email: user.email,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      document.getElementById("registerForm").reset();
+
+      showMessage("Student account created successfully!");
+
+      await loadStudentDashboard(user);
+
+    } catch (error) {
+      showMessage("Registration error: " + error.message);
+    }
+  });
+
+  // STUDENT LOGIN
+
+  document.getElementById("loginForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value;
+
+    try {
+      showMessage("Logging in...");
+
+      const result = await auth.signInWithEmailAndPassword(email, password);
+
+      await loadStudentDashboard(result.user);
+
+      showMessage("Login successful!");
+
+    } catch (error) {
+      showMessage("Login error: " + error.message);
+    }
+  });
+
+  // PASSWORD RESET
+
+  document.getElementById("resetForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("resetEmail").value.trim();
+
+    try {
+      await auth.sendPasswordResetEmail(email);
+
+      showMessage("Password reset link sent. Check your email.");
+
+    } catch (error) {
+      showMessage("Password reset error: " + error.message);
+    }
+  });
+
+  // LOAD STUDENT DASHBOARD
+
+  async function loadStudentDashboard(user) {
+    currentStudent = user;
+
+    document.getElementById("authForms").classList.add("hidden");
+    document.getElementById("studentDashboard").classList.remove("hidden");
+
+    document.getElementById("studentEmail").textContent = user.email || "";
+
+    try {
+      const doc = await db.collection("users").doc(user.uid).get();
+
+      if (doc.exists) {
+        const student = doc.data();
+
+        document.getElementById("studentName").textContent = student.name || "";
+        document.getElementById("studentSchool").textContent = student.school || "";
+        document.getElementById("studentGrade").textContent = student.grade || "";
+
+        document.getElementById("assessmentName").value = student.name || "";
+        document.getElementById("assessmentGrade").value = student.grade || "Grade 1";
+
+      } else {
+        document.getElementById("studentName").textContent = "Student";
+        document.getElementById("studentSchool").textContent = "Not available";
+        document.getElementById("studentGrade").textContent = "Not available";
+      }
+
+    } catch (error) {
+      showMessage("Could not load student profile: " + error.message);
+    }
   }
 
-  const total = eng + math;
-  const average = total / 2;
+  // CHECK LOGIN STATUS
 
-  const grade = average >= 80 ? "A" :
-    average >= 70 ? "B" :
-    average >= 60 ? "C" :
-    average >= 50 ? "D" : "E";
+  auth.onAuthStateChanged(async function(user) {
+    if (user) {
+      await loadStudentDashboard(user);
+    } else {
+      currentStudent = null;
 
-  document.getElementById("result").textContent =
-    "Student: " + name +
-    " | Admission: " + adm +
-    " | Total: " + total +
-    " | Average: " + average +
-    " | Practice Grade: " + grade;
-}
-</script>
+      document.getElementById("authForms").classList.remove("hidden");
+      document.getElementById("studentDashboard").classList.add("hidden");
+    }
+  });
 
-<script type="module">
-import { initializeApp } from
-  "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  // LOG OUT
 
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  sendPasswordResetEmail,
-  signOut,
-  onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+  document.getElementById("logoutButton").addEventListener("click", async function() {
+    try {
+      await auth.signOut();
+      showMessage("You have logged out successfully.");
+    } catch (error) {
+      showMessage("Logout error: " + error.message);
+    }
+  });
 
-import {
-  getFirestore,
-  doc,
-  setDoc,
-  getDoc,
-  serverTimestamp
-} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+  // CBC SUBJECTS
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAnk5QgkHF6aVP2eoYo2V8PaVtNUso0wEI",
-  authDomain: "lucky-ish-cbc.firebaseapp.com",
-  projectId: "lucky-ish-cbc",
-  storageBucket: "lucky-ish-cbc.firebasestorage.app",
-  messagingSenderId: "261343586638",
-  appId: "1:261343586638:web:e267f8733aaea194fd161f"
-};
+  function getSubjectsForGrade(grade) {
+    const number = parseInt(grade.replace("Grade ", ""), 10);
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+    if (number <= 3) {
+      return [
+        "English Language Activities",
+        "Kiswahili Language Activities",
+        "Mathematical Activities",
+        "Environmental Activities",
+        "Religious Education Activities",
+        "Creative Activities",
+        "Movement and Creative Activities",
+        "Indigenous Language"
+      ];
+    }
 
-const registerMessage = document.getElementById("registerMessage");
-const loginMessage = document.getElementById("loginMessage");
+    if (number <= 6) {
+      return [
+        "English",
+        "Kiswahili",
+        "Mathematics",
+        "Science and Technology",
+        "Agriculture",
+        "Social Studies",
+        "Religious Education",
+        "Creative Arts",
+        "Physical and Health Education",
+        "Home Science",
+        "Indigenous Language"
+      ];
+    }
 
-document.getElementById("registerForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  registerMessage.textContent = "Creating your account...";
+    if (number <= 9) {
+      return [
+        "English",
+        "Kiswahili",
+        "Mathematics",
+        "Integrated Science",
+        "Health Education",
+        "Pre-Technical Studies",
+        "Social Studies",
+        "Religious Education",
+        "Agriculture",
+        "Life Skills Education",
+        "Sports and Physical Education",
+        "Visual Arts",
+        "Performing Arts",
+        "Business Studies",
+        "Computer Science",
+        "Foreign Languages"
+      ];
+    }
 
-  const name = document.getElementById("fullName").value.trim();
-  const school = document.getElementById("school").value.trim();
-  const grade = document.getElementById("grade").value;
-  const email = document.getElementById("regEmail").value.trim();
-  const password = document.getElementById("regPassword").value;
+    return [
+      "English",
+      "Kiswahili",
+      "Mathematics",
+      "Biology",
+      "Chemistry",
+      "Physics",
+      "General Science",
+      "Geography",
+      "History",
+      "Business Studies",
+      "Agriculture",
+      "Computer Studies",
+      "Home Science",
+      "Art and Design",
+      "Music",
+      "Physical Education",
+      "Other School Subject"
+    ];
+  }
 
-  try {
-    const result = await createUserWithEmailAndPassword(auth, email, password);
+  const assessmentGrade = document.getElementById("assessmentGrade");
+  const subjectSelect = document.getElementById("subjectSelect");
+  const subjectRows = document.getElementById("subjectRows");
 
-    await setDoc(doc(db, "users", result.user.uid), {
-      name: name,
-      school: school,
-      role: "student",
-      grade: grade,
-      email: email,
-      createdAt: serverTimestamp()
+  function refreshSubjectOptions() {
+    const subjects = getSubjectsForGrade(assessmentGrade.value);
+
+    subjectSelect.innerHTML = "";
+
+    subjects.forEach(function(subject) {
+      const option = document.createElement("option");
+      option.value = subject;
+      option.textContent = subject;
+      subjectSelect.appendChild(option);
+    });
+  }
+
+  function addSubject(subject) {
+    const existingRows = Array.from(subjectRows.querySelectorAll(".subject-row"));
+
+    const alreadyAdded = existingRows.some(function(row) {
+      return row.dataset.subject === subject;
     });
 
-    registerMessage.textContent = "Account created successfully! You are now logged in.";
-    document.getElementById("registerForm").reset();
-
-  } catch (error) {
-    registerMessage.textContent = "Account error: " + error.message;
-  }
-});
-
-document.getElementById("loginForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  loginMessage.textContent = "Logging in...";
-
-  const email = document.getElementById("loginEmail").value.trim();
-  const password = document.getElementById("loginPassword").value;
-
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-    loginMessage.textContent = "Login successful!";
-  } catch (error) {
-    loginMessage.textContent = "Login error: " + error.message;
-  }
-});
-
-document.getElementById("resetButton").addEventListener("click", async () => {
-  const email = document.getElementById("loginEmail").value.trim();
-
-  if (!email) {
-    loginMessage.textContent = "Enter your email address first.";
-    return;
-  }
-
-  try {
-    await sendPasswordResetEmail(auth, email);
-    loginMessage.textContent = "Password reset instructions have been sent to your email.";
-  } catch (error) {
-    loginMessage.textContent = "Reset error: " + error.message;
-  }
-});
-
-document.getElementById("logoutButton").addEventListener("click", async () => {
-  await signOut(auth);
-});
-
-onAuthStateChanged(auth, async (user) => {
-  const dashboard = document.getElementById("dashboard");
-  const registerPanel = document.getElementById("registerPanel");
-  const loginPanel = document.getElementById("loginPanel");
-
-  if (!user) {
-    dashboard.classList.add("hidden");
-    registerPanel.classList.remove("hidden");
-    loginPanel.classList.remove("hidden");
-    return;
-  }
-
-  try {
-    const profileRef = doc(db, "users", user.uid);
-    const profileSnap = await getDoc(profileRef);
-
-    if (!profileSnap.exists()) {
-      loginMessage.textContent =
-        "Your account profile is not ready. Please contact the system administrator.";
+    if (alreadyAdded) {
+      alert("This subject has already been added.");
       return;
     }
 
-    const profile = profileSnap.data();
+    const row = document.createElement("div");
+    row.className = "subject-row";
+    row.dataset.subject = subject;
 
-    document.getElementById("welcomeName").textContent =
-      "Welcome, " + profile.name;
+    const label = document.createElement("span");
+    label.textContent = subject;
 
-    document.getElementById("profileSchool").textContent =
-      "School: " + profile.school;
+    const markInput = document.createElement("input");
+    markInput.type = "number";
+    markInput.min = "0";
+    markInput.max = "100";
+    markInput.step = "1";
+    markInput.placeholder = "0-100";
+    markInput.required = true;
+    markInput.setAttribute("aria-label", subject + " marks");
 
-    document.getElementById("profileGrade").textContent =
-      "Grade: " + (profile.grade || "Teacher");
+    const removeButton = document.createElement("button");
+    removeButton.type = "button";
+    removeButton.textContent = "X";
+    removeButton.addEventListener("click", function() {
+      row.remove();
+    });
 
-    document.getElementById("profileRole").textContent =
-      "Account type: " + profile.role;
+    row.appendChild(label);
+    row.appendChild(markInput);
+    row.appendChild(removeButton);
 
-    dashboard.classList.remove("hidden");
-    registerPanel.classList.add("hidden");
-    loginPanel.classList.add("hidden");
-
-  } catch (error) {
-    loginMessage.textContent = "Could not load profile: " + error.message;
+    subjectRows.appendChild(row);
   }
-});
+
+  document.getElementById("addSubjectButton").addEventListener("click", function() {
+    addSubject(subjectSelect.value);
+  });
+
+  assessmentGrade.addEventListener("change", function() {
+    refreshSubjectOptions();
+  });
+
+  // INITIAL SUBJECTS
+
+  refreshSubjectOptions();
+
+  addSubject("English");
+  addSubject("Mathematics");
+  addSubject("Kiswahili");
+  addSubject("Science and Technology");
+
+  // CALCULATE MARKS AND CREATE REPORT
+
+  document.getElementById("calculateButton").addEventListener("click", function() {
+    const rows = Array.from(subjectRows.querySelectorAll(".subject-row"));
+
+    if (rows.length === 0) {
+      alert("Please add at least one subject.");
+      return;
+    }
+
+    const marks = [];
+    let total = 0;
+
+    for (const row of rows) {
+      const subject = row.dataset.subject;
+      const input = row.querySelector("input");
+      const mark = Number(input.value);
+
+      if (input.value === "" || !Number.isFinite(mark) || mark < 0 || mark > 100) {
+        alert("Enter a valid mark from 0 to 100 for " + subject);
+        input.focus();
+        return;
+      }
+
+      marks.push({
+        subject: subject,
+        mark: mark
+      });
+
+      total += mark;
+    }
+
+    const average = total / marks.length;
+
+    const name =
+      document.getElementById("assessmentName").value.trim() ||
+      (currentStudent ? currentStudent.email : "Student");
+
+    const grade = assessmentGrade.value;
+
+    let tableRows = "";
+
+    marks.forEach(function(item) {
+      tableRows += `
+        <tr>
+          <td>${escapeHTML(item.subject)}</td>
+          <td>${item.mark}</td>
+        </tr>
+      `;
+    });
+
+    const report = document.getElementById("reportCard");
+
+    report.innerHTML = `
+      <h3>LUCKY ISH CBC SMART LEARNING SYSTEM</h3>
+      <h3>STUDENT PRACTICE REPORT CARD</h3>
+
+      <p><strong>Student:</strong> ${escapeHTML(name)}</p>
+      <p><strong>Grade:</strong> ${escapeHTML(grade)}</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          ${tableRows}
+        </tbody>
+      </table>
+
+      <h3>Total Marks: ${total}</h3>
+      <h3>Average: ${average.toFixed(1)}%</h3>
+
+      <p>
+        This is a practice assessment summary.
+        It is not an official KNEC result or official CBC grading report.
+      </p>
+    `;
+
+    report.classList.remove("hidden");
+    document.getElementById("printButton").classList.remove("hidden");
+
+    report.scrollIntoView({ behavior: "smooth" });
+  });
+
+  // SAFE TEXT FOR REPORT CARD
+
+  function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, function(character) {
+      const replacements = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      };
+
+      return replacements[character];
+    });
+  }
+
+  // PRINT REPORT CARD
+
+  document.getElementById("printButton").addEventListener("click", function() {
+    window.print();
+  });
+
 </script>
 
 </body>
