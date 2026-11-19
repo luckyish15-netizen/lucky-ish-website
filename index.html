@@ -1,35 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucky Ish CBC / CBE Smart Learning System | Grade 7–10 & Form 3–4</title>
-  <meta name="description" content="Independent Kenyan learning platform for Grade 7, Grade 8, Grade 9, Grade 10, Form 3, and Form 4 learners with structured subjects, full study topics, and end-of-topic quizzes.">
+  <title>ElimuSmart KE by Manuel Wandera (Lucky Ish) | Grade 7–10 &amp; Form 3–4 Learning Hub</title>
+  <meta name="description" content="ElimuSmart KE is an independent Kenyan learning and revision hub created by Manuel Wandera (Lucky Ish Programmer / lucky is 254) from Rumbiye, Agenga/Naguba, Busia County, Kenya, supporting Grade 7, Grade 8, Grade 9, Grade 10, Form 3, and Form 4 learners.">
+  <meta name="keywords" content="Manuel Wandera, Lucky Ish, Lucky Ish Programmer, lucky is 254, Bukiri Senior Secondary School, Busia County Kenya, Grade 7 notes Kenya, Grade 8 CBC, Grade 9 KJSEA, Grade 10 CBC, Form 3 revision, Form 4 KCSE past papers, Kenya learning hub">
+  <meta name="author" content="Manuel Wandera (Lucky Ish)">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://luckyish15-netizen.github.io/">
+  <meta name="google-site-verification" content="E31AMhCWPnMmMS4U5Q3qAReAP8ak4fsSB3smdc6c6jo">
 
-  <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Lucky Ish CBC / CBE Smart Learning System">
-  <meta property="og:description" content="Structured subjects, study topics, and end-of-topic quizzes for Grade 7–10 and Form 3–4 learners in Kenya.">
+  <!-- Open Graph / Social Metadata -->
   <meta property="og:type" content="website">
+  <meta property="og:title" content="ElimuSmart KE by Manuel Wandera (Lucky Ish) | Kenya Learning Hub">
+  <meta property="og:description" content="Created by Manuel Wandera (Lucky Ish Programmer / lucky is 254) from Busia County, Kenya. Study notes, self-test quizzes, and study planner for Grade 7–10 &amp; Form 3–4.">
   <meta property="og:url" content="https://luckyish15-netizen.github.io/">
+  <meta property="og:locale" content="en_KE">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Structured Data for Search Engines & AI Systems -->
+  <!-- Structured Data (JSON-LD) for AI & Search Engines -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Person",
+        "@id": "https://luckyish15-netizen.github.io/#manuel-wandera",
+        "name": "Manuel Wandera",
+        "alternateName": [
+          "Lucky Ish",
+          "Lucky Ish Programmer",
+          "lucky is 254"
+        ],
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Rumbiye, Agenga/Naguba Sub-location, Busia County, Kenya"
+        },
+        "affiliation": {
+          "@type": "EducationalOrganization",
+          "name": "Bukiri Senior Secondary School"
+        },
+        "sameAs": [
+          "https://www.facebook.com/",
+          "https://www.instagram.com/"
+        ]
+      },
+      {
         "@type": "EducationalOrganization",
         "@id": "https://luckyish15-netizen.github.io/#organization",
-        "name": "Lucky Ish CBC Smart Learning System",
+        "name": "ElimuSmart KE",
         "url": "https://luckyish15-netizen.github.io/",
-        "description": "An independent educational learning platform in Kenya supporting Grade 7, Grade 8, Grade 9, Grade 10, Form 3, and Form 4 learners with organized curriculum subjects, study notes, and end-of-topic quizzes under CBC/CBE and secondary learning.",
+        "founder": {
+          "@id": "https://luckyish15-netizen.github.io/#manuel-wandera"
+        },
+        "description": "An independent Kenyan educational learning and revision hub supporting Grade 7, Grade 8, Grade 9, Grade 10, Form 3, and Form 4 learners.",
         "areaServed": {
           "@type": "Country",
           "name": "Kenya"
@@ -39,29 +63,223 @@
         "@type": "WebSite",
         "@id": "https://luckyish15-netizen.github.io/#website",
         "url": "https://luckyish15-netizen.github.io/",
-        "name": "Lucky Ish CBC Smart Learning System",
+        "name": "ElimuSmart KE",
+        "creator": {
+          "@id": "https://luckyish15-netizen.github.io/#manuel-wandera"
+        },
         "publisher": {
           "@id": "https://luckyish15-netizen.github.io/#organization"
         },
-        "inLanguage": ["en-KE", "sw-KE"]
+        "inLanguage": [
+          "en-KE",
+          "sw-KE"
+        ]
       }
     ]
   }
   </script>
 
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              indigo: '#4F46E5',
+              indigoDark: '#3730A3',
+              emerald: '#059669',
+              emeraldLight: '#D1FAE5',
+              amber: '#D97706',
+              amberLight: '#FEF3C7',
+              slateDark: '#0F172A'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
   <style>
-    :root {
-      --bg-dark: #090d16;
-      --bg-card: #111827;
-      --bg-card-soft: #162033;
-      --bg-input: #0b1120;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent: #f59e0b;
-      --accent-soft: rgba(245, 158, 11, 0.14);
-      --emerald: #10b981;
-      --emerald-soft: rgba(16, 185, 129, 0.14);
-      --danger: #ef4444;
-      --border: rgba(255, 255, 255, 0.1);
-      --radius: 14px;
-      --shadow: 0 12px 30px rgba
+    /* Subtle custom scrollbar & card hover motion */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+    .module-card {
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+    .module-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px -10px rgba(15, 23, 42, 0.14);
+      border-color: #818CF8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-indigo selection:text-white">
+
+  <!-- Top Announcement Strip -->
+  <div class="bg-brand-slateDark text-white text-xs sm:text-sm py-2 px-4 text-center">
+    <span class="inline-flex flex-wrap items-center justify-center gap-2">
+      <span class="bg-brand-emerald text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wide">
+        CBC &amp; 8-4-4 Hub
+      </span>
+      <span>Jifunze &amp; Jiandae • Study Notes, Self-Tests &amp; Study Planner for Grade 7–10 &amp; Form 3–4</span>
+    </span>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+      <a href="#top" class="flex items-center gap-2.5 shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-brand-indigo text-white flex items-center justify-center font-heading font-extrabold text-lg shadow-sm">
+          E
+        </div>
+        <div class="leading-tight">
+          <span class="font-heading font-extrabold text-lg sm:text-xl text-brand-slateDark tracking-tight">
+            Elimu<span class="text-brand-indigo">Smart</span>
+          </span>
+          <span class="block text-[10px] font-semibold uppercase tracking-widest text-slate-500">
+            Kenya Revision Hub
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+        <a href="#modules-section" class="hover:text-brand-indigo transition-colors">Study Modules</a>
+        <a href="#quiz-section" class="hover:text-brand-indigo transition-colors">Self-Test Quiz</a>
+        <a href="#planner-section" class="hover:text-brand-indigo transition-colors">Study Planner</a>
+        <a href="#about-creator-section" class="hover:text-brand-indigo transition-colors">About Creator</a>
+        <a href="#portals-section" class="hover:text-brand-indigo transition-colors">Official Portals</a>
+      </nav>
+
+      <!-- Quick CTA -->
+      <div class="flex items-center gap-2">
+        <a href="#planner-section" class="px-3.5 py-2 rounded-xl bg-brand-indigo hover:bg-brand-indigoDark text-white text-xs sm:text-sm font-semibold transition-colors shadow-sm">
+          My Planner
+        </a>
+        <button id="mobileMenuBtn" type="button" onclick="toggleMobileNav()" aria-label="Toggle menu" class="md:hidden p-2 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobileNav" class="hidden md:hidden bg-white border-t border-slate-100 px-4 py-3 space-y-1.5 shadow-md">
+      <a href="#modules-section" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-brand-indigo">Study Modules</a>
+      <a href="#quiz-section" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-brand-indigo">Self-Test Quiz</a>
+      <a href="#planner-section" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-brand-indigo">Study Planner</a>
+      <a href="#about-creator-section" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-brand-indigo">About Creator</a>
+      <a href="#portals-section" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-brand-indigo">Official Portals</a>
+    </div>
+  </header>
+
+  <!-- Hero Section with Search & Class Filter Pills -->
+  <section id="top" class="bg-gradient-to-br from-indigo-50 via-white to-emerald-50/60 border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-indigo-100 text-brand-indigo text-xs font-bold mb-4">
+          <span>🇰🇪</span>
+          <span>Grade 7 • Grade 8 • Grade 9 • Grade 10 • Form 3 • Form 4</span>
+        </span>
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-slateDark tracking-tight leading-tight mb-4">
+          Soma Rahisi, Faulu Mitihani Yako Ya <span class="text-brand-indigo">CBC &amp; KCSE</span>
+        </h1>
+        <p class="text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed mb-7">
+          Curated revision notes, key formulas, practice questions, self-test quizzes, and a personal study planner built for Junior School, Senior School (Grade 10), and Form 3–4 learners.
+        </p>
+      </div>
+
+      <!-- Instant Search Box -->
+      <div class="max-w-2xl mx-auto mb-7">
+        <div class="relative flex items-center bg-white rounded-2xl border border-slate-300 shadow-sm focus-within:border-brand-indigo focus-within:ring-4 focus-within:ring-indigo-500/15 transition-all p-1.5">
+          <span class="pl-3 text-slate-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+            </svg>
+          </span>
+          <input
+            id="searchInput"
+            type="search"
+            oninput="handleSearchInput()"
+            placeholder="Tafuta somo au mada (e.g. Integrated Science, Algebra, Mole Concept, Business)..."
+            class="w-full px-3 py-2.5 text-sm sm:text-base text-slate-800 placeholder-slate-400 bg-transparent focus:outline-none"
+          >
+          <button
+            id="clearSearchBtn"
+            type="button"
+            onclick="clearSearch()"
+            class="hidden px-3 py-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800 rounded-xl hover:bg-slate-100"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- Top Class Filter Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-2" id="classFilterPills" role="group" aria-label="Filter by class">
+        <button type="button" data-class="All" onclick="selectClass('All')" class="class-pill px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-brand-indigo text-white shadow-sm">
+          All Classes
+        </button>
+        <button type="button" data-class="Grade 7" onclick="selectClass('Grade 7')" class="class-pill px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:border-brand-indigo">
+          Grade 7
+        </button>
+        <button type="button" data-class="Grade 8" onclick="selectClass('Grade 8')" class="class-pill px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:border-brand-indigo">
+          Grade 8
+        </button>
+        <button type="button" data-class="Grade 9" onclick="selectClass('Grade 9')" class="class-pill px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:border-brand-indigo">
+          Grade 9 (KJSEA)
+        </button>
+        <button type="button" data-class="Grade 10" onclick="selectClass('Grade 10')" class="class-pill px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:border-brand-indigo">
+          Grade 10
+        </button>
+        <button type="button" data-class="Form 3" onclick="selectClass('Form 3')" class="class-pill px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:border-brand-indigo">
+          Form 3
+        </button>
+        <button type="button" data-class="Form 4" onclick="selectClass('Form 4')" class="class-pill px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:border-brand-indigo">
+          Form 4 (KCSE)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-14">
+
+    <!-- 1. LEARNING MODULES / STUDY CARDS -->
+    <section id="modules-section">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-indigo">Study Notes &amp; Revision Guides</span>
+          <h2 id="modulesHeading" class="font-heading text-2xl sm:text-3xl font-extrabold text-brand-slateDark mt-0.5">
+            All Learning Modules
+          </h2>
+        </div>
+        <p id="moduleCountText" class="text-xs sm:text-sm font-medium text-slate-500">Showing modules</p>
+      </div>
+
+      <!-- Modules Grid -->
+      <div id="modulesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap
