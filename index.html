@@ -1,980 +1,922 @@
-
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sw" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags kwa ajili ya kupata watumiaji wengi Google -->
+    <title>ElimuHub Kenya | KCSE Past Papers, KNEC Notes, Digital Skills & Career Guides</title>
+    <meta name="description" content="Pakua bure KCSE Past Papers & Marking Schemes, KNEC College Notes, Mafunzo ya Digital Skills, na Mwongozo wa Kozi (KUCCPS Career Guides) Kenya. Jifunze kwa urahisi kupitia simu yako.">
+    <meta name="keywords" content="KCSE Past Papers, Marking Schemes Kenya, KNEC Notes, KUCCPS Cluster Points Calculator, Digital Skills Swahili, ElimuHub Kenya, Free Study Notes">
+    <meta name="author" content="ElimuHub Kenya">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags (WhatsApp, Facebook, X) -->
+    <meta property="og:title" content="ElimuHub Kenya - Jukwaa la Elimu, Mitihani na Ujuzi">
+    <meta property="og:description" content="Pata KCSE Past Papers, KNEC Notes, na Mwongozo wa Kazi bure. Kokotoa alama zako za KCSE hapa!">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#162447',
+                            900: '#0F172A',
+                            950: '#090E1A',
+                        },
+                        emerald: {
+                            500: '#10B981',
+                            600: '#059669',
+                            700: '#047857',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-  <title>Lucky Ish CBC Smart Learning System | Kenya</title>
-
-  <meta name="description" content="Lucky Ish CBC Smart Learning System Kenya. CBC learning support, Grade 1 to Grade 12 subjects, student accounts, assessment calculator, report cards, KJSEA results links and Grade 10 placement guidance.">
-
-  <meta name="robots" content="index, follow">
-
-  <link rel="canonical" href="https://luckyish15-netizen.github.io/lucky-ish-website/">
-
-  <meta name="google-site-verification" content="E31AMhCWPnMmMS4U5Q3qAReAP8ak4fsSB3smdc6c6jo">
-
-  <meta property="og:title" content="Lucky Ish CBC Smart Learning System">
-  <meta property="og:description" content="Smart CBC learning support for Grade 1 to Grade 12 learners in Kenya.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://luckyish15-netizen.github.io/lucky-ish-website/">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Lucky Ish CBC Smart Learning System",
-    "url": "https://luckyish15-netizen.github.io/lucky-ish-website/",
-    "description": "An independent Kenyan educational learning platform supporting CBC learners from Grade 1 to Grade 12.",
-    "inLanguage": "en-KE"
-  }
-  </script>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+    <!-- Structured Data (JSON-LD) kwa ajili ya Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "ElimuHub Kenya",
+      "description": "Jukwaa la bure la rasilimali za elimu, KCSE past papers, KNEC notes, na mafunzo ya ujuzi wa kidijitali Kenya.",
+      "areaServed": "KE",
+      "availableLanguage": ["Swahili", "English"]
     }
+    </script>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #080808;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #111111;
-      border-bottom: 2px solid #d4af37;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .brand {
-      color: #d4af37;
-      font-size: 23px;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 9px 12px;
-      border-radius: 6px;
-      background: #222222;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      background: #d4af37;
-      color: #000000;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 65px 18px;
-      background: linear-gradient(135deg, #111111, #202000);
-    }
-
-    .hero h1 {
-      color: #d4af37;
-      font-size: 32px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 15px auto;
-    }
-
-    .section {
-      padding: 35px 16px;
-      max-width: 1050px;
-      margin: auto;
-    }
-
-    .panel {
-      background: #151515;
-      border: 1px solid #393939;
-      border-radius: 12px;
-      padding: 22px;
-      margin-bottom: 25px;
-    }
-
-    h2, h3 {
-      color: #d4af37;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 13px;
-      margin: 8px 0 14px;
-      border: 1px solid #555555;
-      border-radius: 7px;
-      background: #080808;
-      color: white;
-      font-size: 15px;
-    }
-
-    button, .portal-button {
-      display: inline-block;
-      border: none;
-      border-radius: 7px;
-      background: #d4af37;
-      color: #000000;
-      padding: 13px 17px;
-      margin: 7px 4px 7px 0;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      text-align: center;
-    }
-
-    button:hover, .portal-button:hover {
-      background: #39ff14;
-    }
-
-    .portal-button {
-      display: block;
-      margin: 13px 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
-
-    .message {
-      padding: 12px;
-      margin-top: 12px;
-      border-radius: 7px;
-      background: #242424;
-      overflow-wrap: anywhere;
-    }
-
-    .small-note {
-      color: #cccccc;
-      font-size: 13px;
-    }
-
-    .subject-row {
-      display: grid;
-      grid-template-columns: 1fr 100px auto;
-      gap: 8px;
-      align-items: center;
-      margin-bottom: 9px;
-      padding: 9px;
-      background: #222222;
-      border-radius: 7px;
-    }
-
-    .subject-row input {
-      margin: 0;
-    }
-
-    .subject-row button {
-      margin: 0;
-      padding: 10px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 2px solid #d4af37;
-    }
-
-    #reportCard {
-      background: #ffffff;
-      color: #111111;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
-    #reportCard h3 {
-      color: #111111;
-    }
-
-    #reportCard table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    #reportCard th, #reportCard td {
-      border: 1px solid #777777;
-      padding: 9px;
-      text-align: left;
-    }
-
-    footer {
-      text-align: center;
-      background: #111111;
-      padding: 25px 15px;
-      border-top: 2px solid #d4af37;
-      color: #cccccc;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    @media (max-width: 550px) {
-      .hero h1 {
-        font-size: 25px;
-      }
-
-      .subject-row {
-        grid-template-columns: 1fr 85px auto;
-        font-size: 13px;
-      }
-
-      .panel {
-        padding: 15px;
-      }
-    }
-
-    @media print {
-      body * {
-        visibility: hidden;
-      }
-
-      #reportCard, #reportCard * {
-        visibility: visible;
-      }
-
-      #reportCard {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-      }
-    }
-  </style>
+    <style>
+        /* Custom subtle scrollbar & animations */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
+        }
+        .card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.12);
+        }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
 
-<body>
-
-<header>
-  <div class="brand">LUCKY ISH CBC SMART LEARNING SYSTEM</div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#accounts">Student Account</a>
-    <a href="#assessment">CBC Assessment</a>
-    <a href="#grade9-portal">Grade 9 Portal</a>
-    <a href="#gallery">Gallery</a>
-  </nav>
-</header>
-
-<section class="hero" id="home">
-  <h1>WELCOME TO LUCKY ISH CBC SMART LEARNING SYSTEM</h1>
-
-  <p>
-    A learning support platform for Kenyan learners from Grade 1 to Grade 12.
-    Access student accounts, practice assessments, report cards and official
-    education service links.
-  </p>
-
-  <a class="portal-button" href="#accounts">CREATE STUDENT ACCOUNT</a>
-  <a class="portal-button" href="#assessment">OPEN CBC ASSESSMENT</a>
-</section>
-
-<!-- STUDENT ACCOUNT -->
-
-<section class="section" id="accounts">
-  <div class="panel">
-    <h2>STUDENT ACCOUNT</h2>
-
-    <p>
-      Register your student account or log in to access your student dashboard.
-    </p>
-
-    <div id="authForms" class="grid">
-
-      <form id="registerForm">
-        <h3>Student Registration</h3>
-
-        <label>Full Name</label>
-        <input id="registerName" type="text" required placeholder="Enter full name">
-
-        <label>School Name</label>
-        <input id="registerSchool" type="text" required placeholder="Enter school name">
-
-        <label>Grade</label>
-        <select id="registerGrade" required>
-          <option value="">Select Grade</option>
-          <option>Grade 1</option>
-          <option>Grade 2</option>
-          <option>Grade 3</option>
-          <option>Grade 4</option>
-          <option>Grade 5</option>
-          <option>Grade 6</option>
-          <option>Grade 7</option>
-          <option>Grade 8</option>
-          <option>Grade 9</option>
-          <option>Grade 10</option>
-          <option>Grade 11</option>
-          <option>Grade 12</option>
-        </select>
-
-        <label>Email Address</label>
-        <input id="registerEmail" type="email" required placeholder="Enter email">
-
-        <label>Password</label>
-        <input id="registerPassword" type="password" required minlength="6" placeholder="At least 6 characters">
-
-        <button type="submit">CREATE STUDENT ACCOUNT</button>
-      </form>
-
-      <form id="loginForm">
-        <h3>Student Login</h3>
-
-        <label>Email Address</label>
-        <input id="loginEmail" type="email" required placeholder="Enter email">
-
-        <label>Password</label>
-        <input id="loginPassword" type="password" required placeholder="Enter password">
-
-        <button type="submit">LOGIN</button>
-      </form>
-
-      <form id="resetForm">
-        <h3>Forgot Password?</h3>
-
-        <label>Your Email Address</label>
-        <input id="resetEmail" type="email" required placeholder="Enter registered email">
-
-        <button type="submit">SEND PASSWORD RESET LINK</button>
-      </form>
-
+    <!-- Top Notification Bar -->
+    <div class="bg-emerald-700 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
+        <span class="inline-flex items-center gap-2">
+            <span class="bg-white/20 px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider">MPYA 2026</span>
+            <span>Pakua KCSE & KNEC Revision Bundles Bure! Jiunge na WhatsApp Study Group chini.</span>
+        </span>
     </div>
 
-    <div id="authMessage" class="message" aria-live="polite"></div>
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-10 h-10 rounded-xl bg-navy-900 flex items-center justify-center text-emerald-400 shadow-md group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl text-navy-900 tracking-tight">Elimu<span class="text-emerald-600">Hub</span></span>
+                        <span class="block text-[10px] font-semibold text-slate-500 uppercase tracking-widest -mt-1">Kenya Education</span>
+                    </div>
+                </a>
 
-    <div id="studentDashboard" class="panel hidden">
-      <h2>STUDENT DASHBOARD</h2>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#resources" class="hover:text-emerald-600 transition-colors">Past Papers & Notes</a>
+                    <a href="#calculator" class="hover:text-emerald-600 transition-colors">Grade Calculator</a>
+                    <a href="#community" class="hover:text-emerald-600 transition-colors">WhatsApp Study Group</a>
+                </nav>
 
-      <p>Welcome, <strong id="studentName"></strong></p>
-      <p>School: <span id="studentSchool"></span></p>
-      <p>Grade: <span id="studentGrade"></span></p>
-      <p>Email: <span id="studentEmail"></span></p>
+                <!-- Language Toggle & Mobile Menu Button -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <button id="langToggle" onclick="toggleLanguage()" class="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs sm:text-sm font-semibold text-navy-900 flex items-center gap-1.5 transition-all" aria-label="Badili Lugha">
+                        <i class="fa-solid fa-language text-emerald-600 text-base"></i>
+                        <span id="langLabel">SW / EN</span>
+                    </button>
+                    <a href="#calculator" class="hidden sm:inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-all">
+                        <i class="fa-solid fa-calculator text-emerald-400"></i>
+                        <span>Kokotoa Alama</span>
+                    </a>
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100" aria-label="Menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-      <a class="portal-button" href="#assessment">GO TO CBC ASSESSMENT</a>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+            <a href="#resources" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-emerald-50 hover:text-emerald-700">
+                <i class="fa-solid fa-book-open w-6 text-emerald-600"></i> Past Papers & Notes
+            </a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-emerald-50 hover:text-emerald-700">
+                <i class="fa-solid fa-calculator w-6 text-emerald-600"></i> KCSE Grade Calculator
+            </a>
+            <a href="#community" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-emerald-50 hover:text-emerald-700">
+                <i class="fa-brands fa-whatsapp w-6 text-emerald-600"></i> WhatsApp Study Group
+            </a>
+        </div>
+    </header>
 
-      <button id="logoutButton">LOG OUT</button>
+    <!-- Hero Section with Instant Search -->
+    <section class="relative bg-navy-900 text-white overflow-hidden">
+        <!-- Decorative Background Pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-emerald-500 blur-3xl"></div>
+            <div class="absolute bottom-0 left-10 w-72 h-72 rounded-full bg-blue-500 blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 text-center">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-emerald-300 text-xs sm:text-sm font-semibold mb-6">
+                <i class="fa-solid fa-bolt"></i>
+                <span data-sw="Rasilimali za Bure kwa Wanafunzi & Watafuta Ujuzi" data-en="Free Study Resources for Students & Skill Seekers">Rasilimali za Bure kwa Wanafunzi & Watafuta Ujuzi</span>
+            </div>
+
+            <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight mb-5">
+                <span data-sw="Faulu Mitihani Yako & Jenga" data-en="Ace Your Exams & Build">Faulu Mitihani Yako & Jenga</span>
+                <span class="text-emerald-400" data-sw="Ujuzi wa Kisasa" data-en="Modern Skills">Ujuzi wa Kisasa</span>
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed" data-sw="Pakua KCSE Past Papers na Marking Schemes, KNEC College Notes, mafunzo ya Digital Skills, na mwongozo wa kozi bora za vyuo vikuu Kenya." data-en="Download free KCSE Past Papers & Marking Schemes, KNEC College Notes, Digital Skills tutorials, and KUCCPS career guides across Kenya.">
+                Pakua KCSE Past Papers na Marking Schemes, KNEC College Notes, mafunzo ya Digital Skills, na mwongozo wa kozi bora za vyuo vikuu Kenya.
+            </p>
+
+            <!-- Instant Search Bar -->
+            <div class="max-w-2xl mx-auto relative">
+                <div class="flex items-center bg-white rounded-2xl p-2 shadow-xl focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all">
+                    <div class="pl-3 sm:pl-4 text-slate-400">
+                        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        oninput="filterResources()"
+                        placeholder="Tafuta: Mfano 'Chemistry Paper 1', 'KNEC ICT', 'Freelancing', 'KUCCPS'..." 
+                        class="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-slate-800 placeholder-slate-400 text-sm sm:text-base focus:outline-none bg-transparent"
+                    >
+                    <button onclick="clearSearch()" id="clearSearchBtn" class="hidden px-2.5 py-1.5 text-slate-400 hover:text-slate-600" title="Futa">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <a href="#resources" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base transition-colors shrink-0">
+                        Tafuta
+                    </a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2 mt-4 text-xs text-slate-300">
+                    <span class="text-slate-400">Maarufu:</span>
+                    <button onclick="quickSearch('KCSE')" class="hover:text-emerald-400 underline decoration-slate-600">KCSE 2025</button>
+                    <span>•</span>
+                    <button onclick="quickSearch('Mathematics')" class="hover:text-emerald-400 underline decoration-slate-600">Mathematics</button>
+                    <span>•</span>
+                    <button onclick="quickSearch('KNEC')" class="hover:text-emerald-400 underline decoration-slate-600">KNEC Diploma</button>
+                    <span>•</span>
+                    <button onclick="quickSearch('AI')" class="hover:text-emerald-400 underline decoration-slate-600">Digital & AI Skills</button>
+                </div>
+            </div>
+
+            <!-- Trust Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12 pt-8 border-t border-white/10">
+                <div>
+                    <div class="text-2xl sm:text-3xl font-heading font-extrabold text-white">1,200+</div>
+                    <div class="text-xs sm:text-sm text-slate-400">Past Papers & Notes</div>
+                </div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-heading font-extrabold text-emerald-400">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-400">Bure Kupakua (Free)</div>
+                </div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-heading font-extrabold text-white">45K+</div>
+                    <div class="text-xs sm:text-sm text-slate-400">Wanafunzi Kila Mwezi</div>
+                </div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-heading font-extrabold text-emerald-400">24/7</div>
+                    <div class="text-xs sm:text-sm text-slate-400">Rafiki wa Simu (Mobile)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Study Resources Section -->
+    <main id="resources" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        
+        <!-- Section Header & Category Filter Pills -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+            <div>
+                <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider">Maktaba ya Kidijitali</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-navy-900 mt-1" data-sw="Chagua Kundi la Masomo" data-en="Browse Study Categories">
+                    Chagua Kundi la Masomo
+                </h2>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-2" id="categoryFilters">
+                <button onclick="setCategory('all')" data-cat="all" class="filter-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-navy-900 text-white shadow-sm">
+                    Zote (All)
+                </button>
+                <button onclick="setCategory('kcse')" data-cat="kcse" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-500">
+                    <i class="fa-solid fa-file-lines text-emerald-600 mr-1.5"></i>KCSE Past Papers
+                </button>
+                <button onclick="setCategory('knec')" data-cat="knec" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-500">
+                    <i class="fa-solid fa-building-columns text-blue-600 mr-1.5"></i>KNEC / Colleges
+                </button>
+                <button onclick="setCategory('digital')" data-cat="digital" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-500">
+                    <i class="fa-solid fa-laptop-code text-purple-600 mr-1.5"></i>Digital Skills
+                </button>
+                <button onclick="setCategory('career')" data-cat="career" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-500">
+                    <i class="fa-solid fa-compass text-amber-600 mr-1.5"></i>Career Guides
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Counter -->
+        <div class="flex items-center justify-between text-xs sm:text-sm text-slate-500 mb-6 pb-3 border-b border-slate-200">
+            <span id="resultsCount">Inaonyesha nyenzo 8 za masomo</span>
+            <span class="hidden sm:inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                <i class="fa-solid fa-circle-check"></i> Faili zote zimekaguliwa na walimu
+            </span>
+        </div>
+
+        <!-- Resources Grid -->
+        <div id="resourcesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Cards injected dynamically by JS -->
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div id="emptyState" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200/80 shadow-sm">
+            <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-navy-900">Hakuna matokeo yaliyopatikana</h3>
+            <p class="text-slate-500 text-sm max-w-md mx-auto mt-1 mb-5">Jaribu kutafuta kwa neno lingine rahisi kama "Biology", "KNEC", au "CV".</p>
+            <button onclick="clearSearch()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl text-sm transition-colors">
+                Onyesha Nyenzo Zote
+            </button>
+        </div>
+    </main>
+
+    <!-- Interactive KCSE Grade & Points Calculator Section -->
+    <section id="calculator" class="bg-white border-y border-slate-200/80 py-14 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Info -->
+                <div class="lg:col-span-5 space-y-5">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-calculator"></i> Zana ya Bure (Student Tool)
+                    </div>
+                    <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-navy-900 leading-tight">
+                        Kikokotoo cha Alama za KCSE & Mwongozo wa KUCCPS
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Weka alama (Grades) za masomo yako 7 bora ili kujua <strong>Mean Grade</strong> yako, jumla ya pointi (Aggregate Points), na ngazi ya kozi unayoweza kujiunga nayo (Degree, Diploma, au Certificate).
+                    </p>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200/80 space-y-2.5 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            <span><strong>C+ (46+ pts) na kuendelea:</strong> Sifa ya University Degree (KUCCPS)</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                            <span><strong>C- hadi C plain:</strong> Sifa ya KNEC Diploma Courses</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                            <span><strong>D plain hadi D+:</strong> Sifa ya Craft Certificate & TVET</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Calculator Box -->
+                <div class="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6" id="subjectInputs">
+                        <!-- 7 Subject Selectors generated by JS -->
+                    </div>
+
+                    <div class="bg-navy-900 text-white p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="text-center sm:text-left">
+                            <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Matokeo Yako (7 Subjects)</span>
+                            <div class="flex items-baseline justify-center sm:justify-start gap-3 mt-1">
+                                <span id="calcMeanGrade" class="font-heading text-3xl sm:text-4xl font-extrabold text-emerald-400">B (Plain)</span>
+                                <span id="calcTotalPoints" class="text-sm font-semibold bg-white/10 px-3 py-1 rounded-full">63 / 84 Points</span>
+                            </div>
+                            <p id="calcAdvice" class="text-xs sm:text-sm text-slate-300 mt-2">
+                                Hongera! Unakidhi vigezo vya kuomba kozi za Shahada (Degree) kupitia KUCCPS.
+                            </p>
+                        </div>
+                        <button onclick="resetCalculator()" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors shrink-0">
+                            <i class="fa-solid fa-rotate-right mr-1"></i> Weka Upya
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Study Group & Newsletter Section -->
+    <section id="community" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+        <div class="bg-gradient-to-br from-navy-900 via-navy-800 to-emerald-950 rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden shadow-xl">
+            <div class="absolute right-0 top-0 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold mb-4">
+                        <i class="fa-brands fa-whatsapp text-base"></i> JUMUIYA YA WANAFUNZI
+                    </span>
+                    <h2 class="font-heading text-2xl sm:text-4xl font-extrabold leading-tight mb-4">
+                        Pata Mitihani Mipya na Notes Moja kwa Moja Kwenye Simu Yako
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                        Jiunge na zaidi ya wanafunzi 15,000 wanaopokea <strong>Weekly Revision Papers</strong>, ratiba za mitihani, na fursa za ufadhili (Scholarships) kila wiki bila malipo.
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-xs sm:text-sm text-slate-300">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Hakuna Spam</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> PDF za Bure Kila Wiki</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Majadiliano na Walimu</span>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md border border-white/15 p-6 sm:p-8 rounded-2xl">
+                    <form id="signupForm" onsubmit="handleSignup(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Jina Lako Kamili</label>
+                            <input type="text" id="studentName" required placeholder="Mfano: Brian Kamau / Amina Hassan" class="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Namba ya WhatsApp au Barua Pepe (Email)</label>
+                            <input type="text" id="studentContact" required placeholder="Mfano: 0712 345 678 au jina@gmail.com" class="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Ngazi Yako ya Masomo</label>
+                            <select id="studentLevel" class="w-full px-4 py-3 rounded-xl bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                                <option value="KCSE">Sekondari (Form 1 - Form 4 / KCSE)</option>
+                                <option value="KNEC">Chuo (KNEC / TVET / Diploma)</option>
+                                <option value="University">Chuo Kikuu & Digital Skills</option>
+                                <option value="Teacher">Mwalimu / Mzazi</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-navy-950 font-extrabold text-sm sm:text-base shadow-lg transition-all flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Jiunge Bure Sasa</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 pt-12 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
+                <div>
+                    <div class="flex items-center gap-2 text-white mb-3">
+                        <i class="fa-solid fa-graduation-cap text-emerald-400 text-xl"></i>
+                        <span class="font-heading font-extrabold text-xl">Elimu<span class="text-emerald-400">Hub</span> Kenya</span>
+                    </div>
+                    <p class="text-xs sm:text-sm leading-relaxed text-slate-400">
+                        Jukwaa namba moja la rasilimali za elimu, maandalizi ya mitihani ya KCSE na KNEC, na ujuzi wa kidijitali kwa vijana wa Afrika Mashariki.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Masomo Maarufu</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li><a href="#resources" onclick="setCategory('kcse')" class="hover:text-emerald-400 transition-colors">KCSE Past Papers & Answers</a></li>
+                        <li><a href="#resources" onclick="setCategory('knec')" class="hover:text-emerald-400 transition-colors">KNEC Diploma & Certificate Notes</a></li>
+                        <li><a href="#resources" onclick="setCategory('digital')" class="hover:text-emerald-400 transition-colors">Digital Marketing & AI Skills</a></li>
+                        <li><a href="#resources" onclick="setCategory('career')" class="hover:text-emerald-400 transition-colors">KUCCPS Career & Course Guides</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Zana za Wanafunzi</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li><a href="#calculator" class="hover:text-emerald-400 transition-colors">KCSE Mean Grade Calculator</a></li>
+                        <li><a href="#community" class="hover:text-emerald-400 transition-colors">WhatsApp Study Groups</a></li>
+                        <li><a href="#resources" class="hover:text-emerald-400 transition-colors">Mwongozo wa Kuandika CV</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Wasiliana Nasi</h4>
+                    <p class="text-xs sm:text-sm mb-3">Una swali au unataka kuchangia notes/past papers?</p>
+                    <div class="flex gap-3">
+                        <a href="#community" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-emerald-600 text-white flex items-center justify-center transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#community" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-emerald-600 text-white flex items-center justify-center transition-colors" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#community" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-emerald-600 text-white flex items-center justify-center transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3">
+                <p>&copy; 2026 ElimuHub Kenya. Haki zote zimehifadhiwa.</p>
+                <p>Imetengenezwa kwa ajili ya kukuza elimu bora Kenya 🇰🇪</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Study Resource Preview Modal -->
+    <div id="previewModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/75 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-fadeIn">
+            <!-- Modal Header -->
+            <div class="p-5 sm:p-6 bg-navy-900 text-white flex items-start justify-between gap-4">
+                <div>
+                    <span id="modalBadge" class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 mb-2">
+                        KCSE PAST PAPER
+                    </span>
+                    <h3 id="modalTitle" class="font-heading text-lg sm:text-xl font-bold leading-snug">
+                        KCSE Chemistry Paper 1 & Marking Scheme
+                    </h3>
+                    <p id="modalMeta" class="text-xs text-slate-400 mt-1">PDF • Kurasa 14 • Imepakuliwa mara 3,420</p>
+                </div>
+                <button onclick="closeModal()" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center shrink-0 transition-colors" aria-label="Funga">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body (Interactive Sample Content) -->
+            <div class="p-5 sm:p-6 overflow-y-auto space-y-4 text-sm text-slate-700 leading-relaxed bg-slate-50 flex-1">
+                <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-3">
+                        <span class="font-bold text-navy-900 text-xs uppercase tracking-wider">Hakiki ya Yaliyomo (Sample Preview)</span>
+                        <span class="text-xs text-emerald-600 font-semibold"><i class="fa-solid fa-eye mr-1"></i>Sehemu ya Kwanza</span>
+                    </div>
+                    <div id="modalContent" class="space-y-3 text-slate-700">
+                        <!-- Dynamic sample questions/notes -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer Actions -->
+            <div class="p-4 sm:p-5 bg-white border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <button onclick="copyResourceLink()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-colors">
+                    <i class="fa-solid fa-share-nodes text-emerald-600"></i>
+                    <span>Shiriki Link (WhatsApp)</span>
+                </button>
+                <button id="modalDownloadBtn" onclick="downloadResource()" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-md flex items-center justify-center gap-2 transition-colors">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Pakua Faili Kamili (Bure)</span>
+                </button>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
 
-<!-- CBC ASSESSMENT -->
-
-<section class="section" id="assessment">
-  <div class="panel">
-    <h2>CBC ASSESSMENT CALCULATOR</h2>
-
-    <p>
-      Enter marks for your subjects to calculate your practice average
-      and prepare a simple report card.
-    </p>
-
-    <label>Student Name</label>
-    <input id="assessmentName" type="text" placeholder="Enter student name">
-
-    <label>Select Grade</label>
-    <select id="assessmentGrade">
-      <option>Grade 1</option>
-      <option>Grade 2</option>
-      <option>Grade 3</option>
-      <option>Grade 4</option>
-      <option>Grade 5</option>
-      <option>Grade 6</option>
-      <option>Grade 7</option>
-      <option>Grade 8</option>
-      <option>Grade 9</option>
-      <option>Grade 10</option>
-      <option>Grade 11</option>
-      <option>Grade 12</option>
-    </select>
-
-    <label>Select Subject</label>
-    <select id="subjectSelect"></select>
-
-    <button type="button" id="addSubjectButton">ADD SUBJECT</button>
-
-    <h3>ENTER SUBJECT MARKS</h3>
-
-    <p class="small-note">
-      Enter marks from 0 to 100 for each subject.
-    </p>
-
-    <div id="subjectRows"></div>
-
-    <button type="button" id="calculateButton">CALCULATE RESULTS</button>
-
-    <div id="reportCard" class="hidden"></div>
-
-    <button type="button" id="printButton" class="hidden">PRINT REPORT CARD</button>
-  </div>
-</section>
-
-<!-- GRADE 9 OFFICIAL PORTAL -->
-
-<section class="section" id="grade9-portal">
-  <div class="panel">
-    <h2>GRADE 9 RESULTS & SENIOR SCHOOL PLACEMENT</h2>
-
-    <p>
-      Welcome to the Lucky Ish Grade 9 Student Portal.
-      Use the official government portals below to access examination
-      results and school placement services.
-    </p>
-
-    <hr>
-
-    <h3>1. CHECK KJSEA RESULTS</h3>
-
-    <p>
-      Access the official Kenya National Examinations Council results portal.
-    </p>
-
-    <p class="small-note">
-      Have your Assessment Number and the other details requested
-      by the official KNEC portal ready.
-    </p>
-
-    <a class="portal-button"
-       href="https://kjsea.knec.ac.ke"
-       target="_blank"
-       rel="noopener noreferrer">
-       CHECK OFFICIAL KNEC RESULTS
-    </a>
-
-    <hr>
-
-    <h3>2. CHECK GRADE 10 SCHOOL PLACEMENT</h3>
-
-    <p>
-      Visit the official Ministry of Education selection and placement portal.
-    </p>
-
-    <a class="portal-button"
-       href="https://selection-and-placement.kemis.go.ke/"
-       target="_blank"
-       rel="noopener noreferrer">
-       CHECK SCHOOL PLACEMENT
-    </a>
-
-    <hr>
-
-    <h3>3. SCHOOL PLACEMENT REVIEW</h3>
-
-    <p>
-      If you want to request a different Senior School, contact your
-      Junior School Head or the authorised school representative.
-      Follow the current official review instructions.
-    </p>
-
-    <a class="portal-button"
-       href="https://selection-and-placement.kemis.go.ke/"
-       target="_blank"
-       rel="noopener noreferrer">
-       OPEN OFFICIAL PLACEMENT PORTAL
-    </a>
-
-    <hr>
-
-    <h3>IMPORTANT INFORMATION</h3>
-
-    <p class="small-note">
-      These services are accessed through official government portals.
-      Lucky Ish does not collect Assessment Numbers, passwords or private
-      examination results. School placement reviews are subject to official
-      procedures and approval.
-    </p>
-
-    <p class="small-note">
-      LUCKY ISH CBC SMART LEARNING SYSTEM is an independent educational
-      project and is not affiliated with KNEC or the Ministry of Education.
-    </p>
-  </div>
-</section>
-
-<!-- PHOTO GALLERY -->
-
-<section class="section" id="gallery">
-  <div class="panel">
-    <h2>OUR PHOTO GALLERY</h2>
-
-    <p>Welcome to the Lucky Ish gallery.</p>
-
-    <div class="gallery">
-      <img src="1794743036629.jpg" alt="Lucky Ish gallery photo 1">
-      <img src="1794779833327.jpg" alt="Lucky Ish gallery photo 2">
-      <img src="1794780570922~4.jpg" alt="Lucky Ish gallery photo 3">
+    <!-- Custom Toast Notification (No alert() used!) -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-navy-900 text-white px-5 py-3.5 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-3 max-w-sm">
+        <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p id="toastMessage" class="text-xs sm:text-sm font-medium">Imekamilika!</p>
     </div>
-  </div>
-</section>
 
-<footer>
-  <h3>LUCKY ISH CBC SMART LEARNING SYSTEM</h3>
-
-  <p>Supporting CBC learning in Kenya | Grade 1–12</p>
-
-  <p class="small-note">
-    An independent educational project. Not affiliated with KNEC
-    or the Ministry of Education.
-  </p>
-
-  <p>© 2026 Lucky Ish. All Rights Reserved.</p>
-</footer>
-
-<!-- FIREBASE -->
-
-<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
-
-<script>
-  // FIREBASE CONFIGURATION
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyAnk5QgkHF6aVP2eoYo2V8PaVtNUso0wEI",
-    authDomain: "lucky-ish-cbc.firebaseapp.com",
-    projectId: "lucky-ish-cbc",
-    storageBucket: "lucky-ish-cbc.firebasestorage.app",
-    messagingSenderId: "261343586638",
-    appId: "1:261343586638:web:e267f8733aaea194fd161f",
-    measurementId: "G-98DTM3RG2G"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-
-  const auth = firebase.auth();
-  const db = firebase.firestore();
-
-  let currentStudent = null;
-
-  const authMessage = document.getElementById("authMessage");
-
-  function showMessage(message) {
-    authMessage.textContent = message;
-  }
-
-  // STUDENT REGISTRATION
-
-  document.getElementById("registerForm").addEventListener("submit", async function(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("registerName").value.trim();
-    const school = document.getElementById("registerSchool").value.trim();
-    const grade = document.getElementById("registerGrade").value;
-    const email = document.getElementById("registerEmail").value.trim();
-    const password = document.getElementById("registerPassword").value;
-
-    try {
-      showMessage("Creating your student account...");
-
-      const result = await auth.createUserWithEmailAndPassword(email, password);
-      const user = result.user;
-
-      await db.collection("users").doc(user.uid).set({
-        name: name,
-        school: school,
-        role: "student",
-        grade: grade,
-        email: user.email,
-        createdAt: firebase.firestore.FieldValue.serverTimestamp()
-      });
-
-      document.getElementById("registerForm").reset();
-
-      showMessage("Student account created successfully!");
-
-      await loadStudentDashboard(user);
-
-    } catch (error) {
-      showMessage("Registration error: " + error.message);
-    }
-  });
-
-  // STUDENT LOGIN
-
-  document.getElementById("loginForm").addEventListener("submit", async function(event) {
-    event.preventDefault();
-
-    const email = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value;
-
-    try {
-      showMessage("Logging in...");
-
-      const result = await auth.signInWithEmailAndPassword(email, password);
-
-      await loadStudentDashboard(result.user);
-
-      showMessage("Login successful!");
-
-    } catch (error) {
-      showMessage("Login error: " + error.message);
-    }
-  });
-
-  // PASSWORD RESET
-
-  document.getElementById("resetForm").addEventListener("submit", async function(event) {
-    event.preventDefault();
-
-    const email = document.getElementById("resetEmail").value.trim();
-
-    try {
-      await auth.sendPasswordResetEmail(email);
-
-      showMessage("Password reset link sent. Check your email.");
-
-    } catch (error) {
-      showMessage("Password reset error: " + error.message);
-    }
-  });
-
-  // LOAD STUDENT DASHBOARD
-
-  async function loadStudentDashboard(user) {
-    currentStudent = user;
-
-    document.getElementById("authForms").classList.add("hidden");
-    document.getElementById("studentDashboard").classList.remove("hidden");
-
-    document.getElementById("studentEmail").textContent = user.email || "";
-
-    try {
-      const doc = await db.collection("users").doc(user.uid).get();
-
-      if (doc.exists) {
-        const student = doc.data();
-
-        document.getElementById("studentName").textContent = student.name || "";
-        document.getElementById("studentSchool").textContent = student.school || "";
-        document.getElementById("studentGrade").textContent = student.grade || "";
-
-        document.getElementById("assessmentName").value = student.name || "";
-        document.getElementById("assessmentGrade").value = student.grade || "Grade 1";
-
-      } else {
-        document.getElementById("studentName").textContent = "Student";
-        document.getElementById("studentSchool").textContent = "Not available";
-        document.getElementById("studentGrade").textContent = "Not available";
-      }
-
-    } catch (error) {
-      showMessage("Could not load student profile: " + error.message);
-    }
-  }
-
-  // CHECK LOGIN STATUS
-
-  auth.onAuthStateChanged(async function(user) {
-    if (user) {
-      await loadStudentDashboard(user);
-    } else {
-      currentStudent = null;
-
-      document.getElementById("authForms").classList.remove("hidden");
-      document.getElementById("studentDashboard").classList.add("hidden");
-    }
-  });
-
-  // LOG OUT
-
-  document.getElementById("logoutButton").addEventListener("click", async function() {
-    try {
-      await auth.signOut();
-      showMessage("You have logged out successfully.");
-    } catch (error) {
-      showMessage("Logout error: " + error.message);
-    }
-  });
-
-  // CBC SUBJECTS
-
-  function getSubjectsForGrade(grade) {
-    const number = parseInt(grade.replace("Grade ", ""), 10);
-
-    if (number <= 3) {
-      return [
-        "English Language Activities",
-        "Kiswahili Language Activities",
-        "Mathematical Activities",
-        "Environmental Activities",
-        "Religious Education Activities",
-        "Creative Activities",
-        "Movement and Creative Activities",
-        "Indigenous Language"
-      ];
-    }
-
-    if (number <= 6) {
-      return [
-        "English",
-        "Kiswahili",
-        "Mathematics",
-        "Science and Technology",
-        "Agriculture",
-        "Social Studies",
-        "Religious Education",
-        "Creative Arts",
-        "Physical and Health Education",
-        "Home Science",
-        "Indigenous Language"
-      ];
-    }
-
-    if (number <= 9) {
-      return [
-        "English",
-        "Kiswahili",
-        "Mathematics",
-        "Integrated Science",
-        "Health Education",
-        "Pre-Technical Studies",
-        "Social Studies",
-        "Religious Education",
-        "Agriculture",
-        "Life Skills Education",
-        "Sports and Physical Education",
-        "Visual Arts",
-        "Performing Arts",
-        "Business Studies",
-        "Computer Science",
-        "Foreign Languages"
-      ];
-    }
-
-    return [
-      "English",
-      "Kiswahili",
-      "Mathematics",
-      "Biology",
-      "Chemistry",
-      "Physics",
-      "General Science",
-      "Geography",
-      "History",
-      "Business Studies",
-      "Agriculture",
-      "Computer Studies",
-      "Home Science",
-      "Art and Design",
-      "Music",
-      "Physical Education",
-      "Other School Subject"
-    ];
-  }
-
-  const assessmentGrade = document.getElementById("assessmentGrade");
-  const subjectSelect = document.getElementById("subjectSelect");
-  const subjectRows = document.getElementById("subjectRows");
-
-  function refreshSubjectOptions() {
-    const subjects = getSubjectsForGrade(assessmentGrade.value);
-
-    subjectSelect.innerHTML = "";
-
-    subjects.forEach(function(subject) {
-      const option = document.createElement("option");
-      option.value = subject;
-      option.textContent = subject;
-      subjectSelect.appendChild(option);
-    });
-  }
-
-  function addSubject(subject) {
-    const existingRows = Array.from(subjectRows.querySelectorAll(".subject-row"));
-
-    const alreadyAdded = existingRows.some(function(row) {
-      return row.dataset.subject === subject;
-    });
-
-    if (alreadyAdded) {
-      alert("This subject has already been added.");
-      return;
-    }
-
-    const row = document.createElement("div");
-    row.className = "subject-row";
-    row.dataset.subject = subject;
-
-    const label = document.createElement("span");
-    label.textContent = subject;
-
-    const markInput = document.createElement("input");
-    markInput.type = "number";
-    markInput.min = "0";
-    markInput.max = "100";
-    markInput.step = "1";
-    markInput.placeholder = "0-100";
-    markInput.required = true;
-    markInput.setAttribute("aria-label", subject + " marks");
-
-    const removeButton = document.createElement("button");
-    removeButton.type = "button";
-    removeButton.textContent = "X";
-    removeButton.addEventListener("click", function() {
-      row.remove();
-    });
-
-    row.appendChild(label);
-    row.appendChild(markInput);
-    row.appendChild(removeButton);
-
-    subjectRows.appendChild(row);
-  }
-
-  document.getElementById("addSubjectButton").addEventListener("click", function() {
-    addSubject(subjectSelect.value);
-  });
-
-  assessmentGrade.addEventListener("change", function() {
-    refreshSubjectOptions();
-  });
-
-  // INITIAL SUBJECTS
-
-  refreshSubjectOptions();
-
-  addSubject("English");
-  addSubject("Mathematics");
-  addSubject("Kiswahili");
-  addSubject("Science and Technology");
-
-  // CALCULATE MARKS AND CREATE REPORT
-
-  document.getElementById("calculateButton").addEventListener("click", function() {
-    const rows = Array.from(subjectRows.querySelectorAll(".subject-row"));
-
-    if (rows.length === 0) {
-      alert("Please add at least one subject.");
-      return;
-    }
-
-    const marks = [];
-    let total = 0;
-
-    for (const row of rows) {
-      const subject = row.dataset.subject;
-      const input = row.querySelector("input");
-      const mark = Number(input.value);
-
-      if (input.value === "" || !Number.isFinite(mark) || mark < 0 || mark > 100) {
-        alert("Enter a valid mark from 0 to 100 for " + subject);
-        input.focus();
-        return;
-      }
-
-      marks.push({
-        subject: subject,
-        mark: mark
-      });
-
-      total += mark;
-    }
-
-    const average = total / marks.length;
-
-    const name =
-      document.getElementById("assessmentName").value.trim() ||
-      (currentStudent ? currentStudent.email : "Student");
-
-    const grade = assessmentGrade.value;
-
-    let tableRows = "";
-
-    marks.forEach(function(item) {
-      tableRows += `
-        <tr>
-          <td>${escapeHTML(item.subject)}</td>
-          <td>${item.mark}</td>
-        </tr>
-      `;
-    });
-
-    const report = document.getElementById("reportCard");
-
-    report.innerHTML = `
-      <h3>LUCKY ISH CBC SMART LEARNING SYSTEM</h3>
-      <h3>STUDENT PRACTICE REPORT CARD</h3>
-
-      <p><strong>Student:</strong> ${escapeHTML(name)}</p>
-      <p><strong>Grade:</strong> ${escapeHTML(grade)}</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Subject</th>
-            <th>Marks</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          ${tableRows}
-        </tbody>
-      </table>
-
-      <h3>Total Marks: ${total}</h3>
-      <h3>Average: ${average.toFixed(1)}%</h3>
-
-      <p>
-        This is a practice assessment summary.
-        It is not an official KNEC result or official CBC grading report.
-      </p>
-    `;
-
-    report.classList.remove("hidden");
-    document.getElementById("printButton").classList.remove("hidden");
-
-    report.scrollIntoView({ behavior: "smooth" });
-  });
-
-  // SAFE TEXT FOR REPORT CARD
-
-  function escapeHTML(value) {
-    return String(value).replace(/[&<>"']/g, function(character) {
-      const replacements = {
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#039;"
-      };
-
-      return replacements[character];
-    });
-  }
-
-  // PRINT REPORT CARD
-
-  document.getElementById("printButton").addEventListener("click", function() {
-    window.print();
-  });
-
-</script>
-
+    <!-- JavaScript Application Logic -->
+    <script>
+        // 1. Database ya Rasilimali za Elimu (Study Resources Data)
+        const resourcesData = [
+            {
+                id: 1,
+                category: 'kcse',
+                badge: 'KCSE Past Paper',
+                badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+                title: 'KCSE Mathematics Paper 1 & 2 + Marking Scheme',
+                desc: 'Mkusanyiko wa maswali ya mitihani iliyopita na njia kamili za ukokotoaji (Step-by-step solutions).',
+                pages: '24 Kurasa',
+                downloads: '5,420',
+                preview: `
+                    <p><strong>Swali la 1 (Alama 3):</strong> Bila kutumia kikokotoo (calculator), tafuta thamani ya <code>(2.4 × 10⁻³) ÷ (0.0006)</code> ukitoa jibu lako katika hali ya kawaida (standard form).</p>
+                    <div class="p-3 bg-emerald-50/70 rounded-xl border border-emerald-100 text-xs">
+                        <strong class="text-emerald-800">Mwongozo wa Majibu (Marking Scheme):</strong><br>
+                        0.0006 = 6 × 10⁻⁴ (M1)<br>
+                        (2.4 ÷ 6) × 10⁻³⁻⁽⁻⁴⁾ = 0.4 × 10¹ = <strong>4.0 × 10⁰</strong> au <strong>4</strong> (A1)
+                    </div>
+                    <p><strong>Swali la 2 (Alama 4):</strong> Tatua mlinganyo wa quadratic: <code>2x² - 5x - 3 = 0</code> kwa kutumia njia ya factorization.</p>
+                `
+            },
+            {
+                id: 2,
+                category: 'kcse',
+                badge: 'KCSE Revision',
+                badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+                title: 'Biology Form 1 - 4 Complete Revision Notes',
+                desc: 'Muhtasari rahisi wa mada zote za Biology kuanzia Cell Physiology, Genetics hadi Ecology.',
+                pages: '48 Kurasa',
+                downloads: '4,890',
+                preview: `
+                    <p><strong>Mada: Osmosis & Diffusion (Cell Physiology)</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+                        <li><strong>Diffusion:</strong> Mwendo wa molekuli kutoka sehemu yenye mkusanyiko mkubwa (high concentration) kwenda sehemu yenye mkusanyiko mdogo.</li>
+                        <li><strong>Osmosis:</strong> Mwendo wa molekuli za maji kupitia utando nusu-penyezi (semi-permeable membrane) kutoka dilute solution kwenda concentrated solution.</li>
+                    </ul>
+                    <p class="text-xs text-slate-500 italic">Pakua faili kamili kupata michoro yote ya mitihani ya KCSE Paper 3 (Practical).</p>
+                `
+            },
+            {
+                id: 3,
+                category: 'knec',
+                badge: 'KNEC Diploma',
+                badgeColor: 'bg-blue-50 text-blue-700 border-blue-200',
+                title: 'KNEC ICT & Computer Applications Past Papers',
+                desc: 'Mitihani ya KNEC Module I, II & III pamoja na majibu ya nadharia na vitendo (Practicals).',
+                pages: '32 Kurasa',
+                downloads: '3,110',
+                preview: `
+                    <p><strong>KNEC Module I - Information Communication Technology:</strong></p>
+                    <p><strong>Question 1:</strong> Explain four measures an organization can implement to protect its database from unauthorized access (8 Marks).</p>
+                    <div class="p-3 bg-blue-50/70 rounded-xl border border-blue-100 text-xs">
+                        <strong>Key Points:</strong><br>
+                        1. Strong Password Policies & Two-Factor Authentication (2FA).<br>
+                        2. Role-Based Access Control (RBAC) limiting user privileges.<br>
+                        3. Data Encryption for sensitive records at rest and in transit.<br>
+                        4. Regular security audits and firewall configuration.
+                    </div>
+                `
+            },
+            {
+                id: 4,
+                category: 'digital',
+                badge: 'Digital Skills',
+                badgeColor: 'bg-purple-50 text-purple-700 border-purple-200',
+                title: 'Mwongozo wa Kuanza Freelancing & Remote Work Kenya',
+                desc: 'Jifunze jinsi ya kutengeneza akaunti za Upwork, Fiverr, na kupokea malipo yako kupitia M-Pesa/Payoneer.',
+                pages: '18 Kurasa',
+                downloads: '6,750',
+                preview: `
+                    <p><strong>Hatua 4 za Kuanza Kufanya Kazi Mtandaoni (Remote Work):</strong></p>
+                    <ol class="list-decimal pl-5 space-y-1.5 text-xs sm:text-sm">
+                        <li><strong>Chagua Ujuzi Mmoja:</strong> Virtual Assistance, Graphic Design (Canva), Content Writing, au Data Entry.</li>
+                        <li><strong>Tengeneza Portfolio Rahisi:</strong> Tumia Google Drive au Canva kuonyesha mifano 3 ya kazi zako.</li>
+                        <li><strong>Andika Proposal Fupi Inayolenga Tatizo la Mteja:</strong> Epuka kuandika maelezo marefu yasiyo na tija.</li>
+                    </ol>
+                `
+            },
+            {
+                id: 5,
+                category: 'career',
+                badge: 'Career Guide',
+                badgeColor: 'bg-amber-50 text-amber-700 border-amber-200',
+                title: 'Kozi Bora za Kusoma Ukiwa na C+, C plain, C- au D+',
+                desc: 'Orodha ya kozi zenye soko kubwa la ajira Kenya kwa ngazi za Degree, Diploma, na TVET.',
+                pages: '22 Kurasa',
+                downloads: '8,120',
+                preview: `
+                    <p><strong>Mwongozo wa Uchaguzi wa Kozi (KUCCPS & TVET):</strong></p>
+                    <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm">
+                        <li><strong>Alama ya C+ na kuendelea:</strong> Nursing, Computer Science, Civil Engineering, Education, Procurement & Supply Chain.</li>
+                        <li><strong>Alama ya C- na C plain:</strong> Diploma in Clinical Medicine, Diploma in ICT, Electrical & Electronic Engineering, Hospitality.</li>
+                        <li><strong>Alama ya D plain na D+:</strong> Craft Certificate in Plumbing, Automotive Engineering, Solar PV Installation (soko kubwa sana).</li>
+                    </ul>
+                `
+            },
+            {
+                id: 6,
+                category: 'kcse',
+                badge: 'KCSE Fasihi',
+                badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+                title: 'Kiswahili Karatasi ya 1, 2 & 3 (Insha & Fasihi)',
+                desc: 'Mwongozo wa uandishi wa Insha za kiuamilifu, Ushairi, na maswali ya vitabu teule vya Fasihi.',
+                pages: '30 Kurasa',
+                downloads: '4,300',
+                preview: `
+                    <p><strong>Mbinu za Kupata Alama za Juu Katika Insha (102/1):</strong></p>
+                    <p class="text-xs sm:text-sm">Hakikisha unazingatia <strong>sura ya insha</strong> (kwa mfano: Hotuba, Ripoti, Barua Rasmi, au Tahariri), tumia msamiati sanifu, tamathali za usemi kwa kiasi, na epuka makosa ya hijai (tahajia) na sarufi.</p>
+                `
+            },
+            {
+                id: 7,
+                category: 'knec',
+                badge: 'Business & KASNEB',
+                badgeColor: 'bg-blue-50 text-blue-700 border-blue-200',
+                title: 'CPA & Diploma in Business Management Notes',
+                desc: 'Notes za Financial Accounting, Business Law, na Entrepreneurship kwa wanafunzi wa vyuo.',
+                pages: '40 Kurasa',
+                downloads: '2,640',
+                preview: `
+                    <p><strong>Fundamental Accounting Equation:</strong></p>
+                    <div class="p-3 bg-slate-100 rounded-xl font-mono text-xs text-center font-bold">
+                        Assets = Liabilities + Owner's Equity
+                    </div>
+                    <p class="text-xs sm:text-sm">Maelezo kamili ya jinsi ya kuandaa Trial Balance, Income Statement, na Statement of Financial Position (Balance Sheet) yamo ndani ya faili hili.</p>
+                `
+            },
+            {
+                id: 8,
+                category: 'digital',
+                badge: 'AI & Productivity',
+                badgeColor: 'bg-purple-50 text-purple-700 border-purple-200',
+                title: 'Jinsi ya Kutumia AI Kusoma Haraka & Kuandika CV Bora',
+                desc: 'Prompts bora za kukusaidia kufanya muhtasari wa notes ndefu na kuandaa CV inayovutia waajiri.',
+                pages: '15 Kurasa',
+                downloads: '5,910',
+                preview: `
+                    <p><strong>Mfano wa Prompt Nzuri ya Kujifunzia:</strong></p>
+                    <div class="p-3 bg-purple-50 rounded-xl border border-purple-100 text-xs italic">
+                        "Nielezee dhana ya 'Electromagnetic Induction' kwa lugha rahisi kama mwalimu wa sekondari Kenya, kisha nipe maswali 3 ya kujipima yenye majibu."
+                    </div>
+                `
+            }
+        ];
+
+        let currentCategory = 'all';
+        let currentLang = 'sw';
+        let activeResource = null;
+
+        // 2. Render Study Resources Grid
+        function renderResources() {
+            const grid = document.getElementById('resourcesGrid');
+            const emptyState = document.getElementById('emptyState');
+            const resultsCount = document.getElementById('resultsCount');
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+
+            const filtered = resourcesData.filter(item => {
+                const matchesCat = currentCategory === 'all' || item.category === currentCategory;
+                const matchesSearch = item.title.toLowerCase().includes(query) || 
+                                      item.desc.toLowerCase().includes(query) || 
+                                      item.badge.toLowerCase().includes(query);
+                return matchesCat && matchesSearch;
+            });
+
+            resultsCount.textContent = currentLang === 'sw' 
+                ? `Inaonyesha nyenzo ${filtered.length} za masomo` 
+                : `Showing ${filtered.length} study resources`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(item => `
+                <article class="bg-white rounded-2xl border border-slate-200/90 p-5 flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold border ${item.badgeColor}">
+                                ${item.badge}
+                            </span>
+                            <span class="text-xs text-slate-400 font-medium">
+                                <i class="fa-solid fa-download text-emerald-500 mr-1"></i>${item.downloads}
+                            </span>
+                        </div>
+                        <h3 class="font-heading font-bold text-base sm:text-lg text-navy-900 leading-snug mb-2">
+                            ${item.title}
+                        </h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                            ${item.desc}
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
+                        <span class="text-xs font-semibold text-slate-400">
+                            <i class="fa-regular fa-file-pdf text-rose-500 mr-1"></i>${item.pages}
+                        </span>
+                        <button onclick="openPreview(${item.id})" class="px-3.5 py-2 rounded-xl bg-navy-900 hover:bg-emerald-600 text-white text-xs font-semibold transition-colors flex items-center gap-1.5">
+                            <span>Soma / Pakua</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // 3. Filter & Search Controls
+        function setCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.cat === cat) {
+                    btn.className = 'filter-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-navy-900 text-white shadow-sm';
+                } else {
+                    btn.className = 'filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-500';
+                }
+            });
+            renderResources();
+        }
+
+        function filterResources() {
+            const val = document.getElementById('searchInput').value;
+            const clearBtn = document.getElementById('clearSearchBtn');
+            if (val.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+            renderResources();
+        }
+
+        function quickSearch(term) {
+            const input = document.getElementById('searchInput');
+            input.value = term;
+            filterResources();
+            document.getElementById('resources').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            setCategory('all');
+        }
+
+        // 4. Interactive Preview Modal Logic
+        function openPreview(id) {
+            const item = resourcesData.find(r => r.id === id);
+            if (!item) return;
+            activeResource = item;
+
+            document.getElementById('modalBadge').textContent = item.badge;
+            document.getElementById('modalTitle').textContent = item.title;
+            document.getElementById('modalMeta').textContent = `PDF • ${item.pages} • Imepakuliwa mara ${item.downloads}`;
+            document.getElementById('modalContent').innerHTML = item.preview;
+
+            const modal = document.getElementById('previewModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('previewModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function downloadResource() {
+            if (!activeResource) return;
+            // Tengeneza faili halisi la muhtasari wa maandishi ili mtumiaji aweze kulipakua moja kwa moja
+            const textContent = `ELIMUHUB KENYA - DIGITAL STUDY RESOURCE\n========================================\nMada: ${activeResource.title}\nKundi: ${activeResource.badge}\n\nMaelezo:\n${activeResource.desc}\n\nTembelea ElimuHub Kenya kila siku kupata Past Papers, Marking Schemes, na Notes za bure!\n`;
+            const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${activeResource.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            showToast(`Inapakua: "${activeResource.title}"`);
+            closeModal();
+        }
+
+        function copyResourceLink() {
+            const tempInput = document.createElement('input');
+            tempInput.value = window.location.href;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast('Link imenakiliwa! Shiriki sasa kwenye WhatsApp.');
+        }
+
+        // 5. KCSE Grade & Points Calculator
+        const subjectsList = [
+            { name: 'Mathematics', defaultPts: 9 },
+            { name: 'English', defaultPts: 9 },
+            { name: 'Kiswahili', defaultPts: 10 },
+            { name: 'Science 1 (Chem/Bio/Phy)', defaultPts: 9 },
+            { name: 'Science 2 / Humanity', defaultPts: 9 },
+            { name: 'Humanity (Hist/Geo/CRE)', defaultPts: 9 },
+            { name: 'Technical / Business / Agri', defaultPts: 8 }
+        ];
+
+        const gradeOptions = [
+            { label: 'A (12 pts)', pts: 12 },
+            { label: 'A- (11 pts)', pts: 11 },
+            { label: 'B+ (10 pts)', pts: 10 },
+            { label: 'B (9 pts)', pts: 9 },
+            { label: 'B- (8 pts)', pts: 8 },
+            { label: 'C+ (7 pts)', pts: 7 },
+            { label: 'C (6 pts)', pts: 6 },
+            { label: 'C- (5 pts)', pts: 5 },
+            { label: 'D+ (4 pts)', pts: 4 },
+            { label: 'D (3 pts)', pts: 3 },
+            { label: 'D- (2 pts)', pts: 2 },
+            { label: 'E (1 pt)', pts: 1 }
+        ];
+
+        function initCalculator() {
+            const container = document.getElementById('subjectInputs');
+            container.innerHTML = subjectsList.map((sub, idx) => `
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">${idx + 1}. ${sub.name}</label>
+                    <select onchange="calculateKCSE()" class="kcse-grade-select w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-sm font-semibold text-navy-900 focus:outline-none focus:border-emerald-500">
+                        ${gradeOptions.map(g => `<option value="${g.pts}" ${g.pts === sub.defaultPts ? 'selected' : ''}>${g.label}</option>`).join('')}
+                    </select>
+                </div>
+            `).join('');
+            calculateKCSE();
+        }
+
+        function calculateKCSE() {
+            const selects = document.querySelectorAll('.kcse-grade-select');
+            let total = 0;
+            selects.forEach(sel => total += parseInt(sel.value, 10));
+
+            const meanPts = Math.round(total / 7);
+            let meanGrade = 'E';
+            let advice = '';
+
+            if (total >= 81) { meanGrade = 'A (Plain)'; }
+            else if (total >= 74) { meanGrade = 'A- (Minus)'; }
+            else if (total >= 67) { meanGrade = 'B+ (Plus)'; }
+            else if (total >= 60) { meanGrade = 'B (Plain)'; }
+            else if (total >= 53) { meanGrade = 'B- (Minus)'; }
+            else if (total >= 46) { meanGrade = 'C+ (Plus)'; }
+            else if (total >= 39) { meanGrade = 'C (Plain)'; }
+            else if (total >= 32) { meanGrade = 'C- (Minus)'; }
+            else if (total >= 25) { meanGrade = 'D+ (Plus)'; }
+            else if (total >= 18) { meanGrade = 'D (Plain)'; }
+            else if (total >= 11) { meanGrade = 'D- (Minus)'; }
+
+            if (total >= 46) {
+                advice = 'Hongera! Unakidhi vigezo vya kuomba kozi za Shahada (University Degree) kupitia KUCCPS.';
+            } else if (total >= 32) {
+                advice = 'Vizuri! Unakidhi vigezo vya kujiunga na kozi za KNEC Diploma katika vyuo mbalimbali.';
+            } else {
+                advice = 'Unaweza kujiunga na kozi za Craft Certificate au Artisan (TVET) na kupanda ngazi hadi Diploma & Degree!';
+            }
+
+            document.getElementById('calcMeanGrade').textContent = meanGrade;
+            document.getElementById('calcTotalPoints').textContent = `${total} / 84 Points`;
+            document.getElementById('calcAdvice').textContent = advice;
+        }
+
+        function resetCalculator() {
+            initCalculator();
+            showToast('Kikokotoo kimewekwa upya.');
+        }
+
+        // 6. Community Signup Form Handler
+        function handleSignup(e) {
+            e.preventDefault();
+            const name = document.getElementById('studentName').value;
+            const level = document.getElementById('studentLevel').value;
+            showToast(`Asante ${name}! Umejisajili kikamilifu kwenye kundi la ${level}.`);
+            e.target.reset();
+        }
+
+        // 7. Language Toggle (Swahili / English) & UI Helpers
+        function toggleLanguage() {
+            currentLang = currentLang === 'sw' ? 'en' : 'sw';
+            document.querySelectorAll('[data-sw]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${currentLang}`);
+            });
+            renderResources();
+            showToast(currentLang === 'sw' ? 'Lugha imebadilishwa kuwa Kiswahili' : 'Language switched to English');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3500);
+        }
+
+        // Close modal on outside click
+        document.getElementById('previewModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => {
+            renderResources();
+            initCalculator();
+        });
+    </script>
 </body>
 </html>
+```
